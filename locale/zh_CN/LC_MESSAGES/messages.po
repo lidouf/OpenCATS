@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenCATS\n"
-"POT-Creation-Date: 2017-06-20 20:07+0800\n"
-"PO-Revision-Date: 2017-06-20 20:07+0800\n"
+"POT-Creation-Date: 2017-06-20 20:43+0800\n"
+"PO-Revision-Date: 2017-06-20 20:43+0800\n"
 "Last-Translator: lidouf <lidouf@gmail.com>\n"
 "Language-Team: lidouf@gmail.com\n"
 "Language: zh_CN\n"
@@ -69,6 +69,7 @@ msgid "Add Candidate"
 msgstr "添加候选人"
 
 #: modules/candidates/Add.tpl:72 modules/companies/Show.tpl:300
+#: modules/contacts/Add.tpl:28 modules/contacts/Edit.tpl:30
 msgid "First Name"
 msgstr "姓名"
 
@@ -77,14 +78,19 @@ msgid "Middle Name"
 msgstr "中名"
 
 #: modules/candidates/Add.tpl:151 modules/companies/Show.tpl:301
+#: modules/contacts/Add.tpl:37 modules/contacts/Edit.tpl:39
 msgid "Last Name"
 msgstr "姓氏首字母"
 
 #: modules/candidates/Add.tpl:160 modules/candidates/Show.tpl:62
+#: modules/contacts/Add.tpl:123 modules/contacts/Edit.tpl:145
+#: modules/contacts/Show.tpl:111
 msgid "E-Mail"
 msgstr "电子邮件"
 
 #: modules/candidates/Add.tpl:169 modules/candidates/Show.tpl:70
+#: modules/contacts/Add.tpl:132 modules/contacts/Edit.tpl:154
+#: modules/contacts/Show.tpl:118
 msgid "2nd E-Mail"
 msgstr "次要邮件"
 
@@ -99,18 +105,21 @@ msgid "Home Phone"
 msgstr "家庭电话"
 
 #: modules/candidates/Add.tpl:206 modules/candidates/Show.tpl:84
-#: modules/companies/Show.tpl:305
+#: modules/companies/Show.tpl:305 modules/contacts/Add.tpl:150
+#: modules/contacts/Edit.tpl:170 modules/contacts/Show.tpl:75
 msgid "Cell Phone"
 msgstr "移动电话"
 
 #: modules/candidates/Add.tpl:215 modules/candidates/Show.tpl:89
-#: modules/companies/Show.tpl:304
+#: modules/companies/Show.tpl:304 modules/contacts/Add.tpl:141
+#: modules/contacts/Edit.tpl:163 modules/contacts/Show.tpl:70
 msgid "Work Phone"
 msgstr "工作电话"
 
 #: modules/candidates/Add.tpl:224 modules/candidates/Show.tpl:99
 #: modules/companies/Add.tpl:75 modules/companies/Edit.tpl:141
-#: modules/companies/Show.tpl:53
+#: modules/companies/Show.tpl:53 modules/contacts/Add.tpl:168
+#: modules/contacts/Edit.tpl:188 modules/contacts/Show.tpl:125
 msgid "Address"
 msgstr "地址"
 
@@ -119,17 +128,20 @@ msgid "\n"
 msgstr ""
 
 #: modules/candidates/Add.tpl:234 modules/companies/Add.tpl:84
-#: modules/companies/Edit.tpl:150 modules/joborders/Add.tpl:141
+#: modules/companies/Edit.tpl:150 modules/contacts/Add.tpl:177
+#: modules/contacts/Edit.tpl:197 modules/joborders/Add.tpl:141
 msgid "City"
 msgstr "城市"
 
 #: modules/candidates/Add.tpl:243 modules/companies/Add.tpl:93
-#: modules/companies/Edit.tpl:157 modules/joborders/Add.tpl:161
+#: modules/companies/Edit.tpl:157 modules/contacts/Add.tpl:186
+#: modules/contacts/Edit.tpl:206 modules/joborders/Add.tpl:161
 msgid "State"
 msgstr "省份"
 
 #: modules/candidates/Add.tpl:252 modules/companies/Add.tpl:102
-#: modules/companies/Edit.tpl:164
+#: modules/companies/Edit.tpl:164 modules/contacts/Add.tpl:195
+#: modules/contacts/Edit.tpl:215
 msgid "Postal Code"
 msgstr "邮政编码"
 
@@ -200,12 +212,14 @@ msgstr "主要技能"
 
 #: modules/candidates/Add.tpl:488 modules/candidates/Show.tpl:279
 #: modules/companies/Add.tpl:172 modules/companies/Edit.tpl:237
-#: modules/companies/Show.tpl:198
+#: modules/companies/Show.tpl:198 modules/contacts/Add.tpl:228
+#: modules/contacts/Edit.tpl:269 modules/contacts/Show.tpl:163
 msgid "Misc. Notes"
 msgstr "杂项备注"
 
 #: modules/candidates/Add.tpl:497 modules/companies/Add.tpl:180
-#: modules/companies/Edit.tpl:246 modules/joborders/Add.tpl:304
+#: modules/companies/Edit.tpl:246 modules/contacts/Add.tpl:236
+#: modules/contacts/Edit.tpl:277 modules/joborders/Add.tpl:304
 msgid "Reset"
 msgstr "重置"
 
@@ -273,7 +287,7 @@ msgstr ""
 "该候选人已隐藏。只有管理员能够查看或搜索他。要使其他用户可见，请点击%s。"
 
 #: modules/candidates/Show.tpl:47 modules/companies/Show.tpl:28
-#: modules/home/Home.tpl:34
+#: modules/contacts/Show.tpl:29 modules/home/Home.tpl:34
 msgid "Name"
 msgstr "名称"
 
@@ -290,27 +304,32 @@ msgid "Submitted"
 msgstr "提交次数"
 
 #: modules/candidates/Show.tpl:186 modules/companies/Show.tpl:107
-#: modules/companies/Show.tpl:306
+#: modules/companies/Show.tpl:306 modules/contacts/Show.tpl:138
+#: modules/contacts/Show.tpl:230
 msgid "Created"
 msgstr "创建"
 
 #: modules/candidates/Show.tpl:191 modules/candidates/Show.tpl:449
 #: modules/companies/Edit.tpl:206 modules/companies/Show.tpl:112
-#: modules/companies/Show.tpl:307 modules/joborders/Add.tpl:207
+#: modules/companies/Show.tpl:307 modules/contacts/Edit.tpl:247
+#: modules/contacts/Show.tpl:143 modules/contacts/Show.tpl:237
+#: modules/joborders/Add.tpl:207
 msgid "Owner"
 msgstr "职位提供者"
 
 #: modules/candidates/Show.tpl:212 modules/candidates/Show.tpl:367
 #: modules/candidates/Show.tpl:416 modules/candidates/Show.tpl:429
 #: modules/candidates/Show.tpl:433 modules/companies/Show.tpl:228
+#: modules/contacts/Show.tpl:210 modules/contacts/Show.tpl:289
 msgid "Delete"
 msgstr "删除"
 
-#: modules/candidates/Show.tpl:297
+#: modules/candidates/Show.tpl:297 modules/contacts/Show.tpl:180
 msgid "Upcoming Events"
 msgstr "即将事件"
 
-#: modules/candidates/Show.tpl:310
+#: modules/candidates/Show.tpl:310 modules/contacts/Show.tpl:193
+#: modules/contacts/Show.tpl:298 modules/contacts/Show.tpl:299
 msgid "Schedule Event"
 msgstr "计划事件"
 
@@ -359,6 +378,7 @@ msgid "Remove"
 msgstr "移除"
 
 #: modules/candidates/Show.tpl:410 modules/companies/Show.tpl:222
+#: modules/contacts/Show.tpl:204 modules/contacts/Show.tpl:284
 msgid "Edit"
 msgstr "编辑"
 
@@ -367,6 +387,7 @@ msgid "Delete this candidate?"
 msgstr "删除本候选人？"
 
 #: modules/candidates/Show.tpl:422 modules/companies/Show.tpl:234
+#: modules/contacts/Show.tpl:216
 msgid "View History"
 msgstr "查看历史"
 
@@ -387,11 +408,14 @@ msgid "Match"
 msgstr "匹配度"
 
 #: modules/candidates/Show.tpl:447 modules/companies/Show.tpl:302
+#: modules/contacts/Add.tpl:63 modules/contacts/Edit.tpl:66
+#: modules/contacts/Show.tpl:60 modules/contacts/Show.tpl:227
 #: modules/joborders/Add.tpl:35
 msgid "Title"
 msgstr "名称"
 
-#: modules/candidates/Show.tpl:448 modules/home/Home.tpl:35
+#: modules/candidates/Show.tpl:448 modules/contacts/Add.tpl:46
+#: modules/contacts/Show.tpl:46 modules/home/Home.tpl:35
 #: modules/joborders/Add.tpl:51
 msgid "Company"
 msgstr "公司"
@@ -404,12 +428,12 @@ msgstr "添加时间"
 msgid "Entered By"
 msgstr "录入人"
 
-#: modules/candidates/Show.tpl:452
+#: modules/candidates/Show.tpl:452 modules/contacts/Show.tpl:229
 msgid "Status"
 msgstr "状态"
 
 #: modules/candidates/Show.tpl:454 modules/candidates/Show.tpl:551
-#: modules/companies/Show.tpl:308
+#: modules/companies/Show.tpl:308 modules/contacts/Show.tpl:271
 msgid "Action"
 msgstr "操作"
 
@@ -422,6 +446,7 @@ msgid "Hide History"
 msgstr "隐藏历史"
 
 #: modules/candidates/Show.tpl:503 modules/candidates/Show.tpl:583
+#: modules/contacts/Show.tpl:298 modules/contacts/Show.tpl:299
 msgid "Log an Activity"
 msgstr "添加活动日志"
 
@@ -445,32 +470,34 @@ msgstr "添加到管线"
 msgid "Add This Candidate to Job Order Pipeline"
 msgstr "将该候选人添加到职位管线"
 
-#: modules/candidates/Show.tpl:541
+#: modules/candidates/Show.tpl:541 modules/contacts/Show.tpl:263
 msgid "Activity"
 msgstr "活动"
 
-#: modules/candidates/Show.tpl:545 modules/home/Home.tpl:37
+#: modules/candidates/Show.tpl:545 modules/contacts/Show.tpl:266
+#: modules/home/Home.tpl:37
 msgid "Date"
 msgstr "日期"
 
-#: modules/candidates/Show.tpl:546 modules/joborders/Add.tpl:122
+#: modules/candidates/Show.tpl:546 modules/contacts/Show.tpl:228
+#: modules/contacts/Show.tpl:267 modules/joborders/Add.tpl:122
 msgid "Type"
 msgstr "类型"
 
-#: modules/candidates/Show.tpl:547
+#: modules/candidates/Show.tpl:547 modules/contacts/Show.tpl:268
 msgid "Entered"
 msgstr "录入"
 
-#: modules/candidates/Show.tpl:548
+#: modules/candidates/Show.tpl:548 modules/contacts/Show.tpl:269
 msgid "Regarding"
 msgstr "关联"
 
-#: modules/candidates/Show.tpl:549
+#: modules/candidates/Show.tpl:549 modules/contacts/Show.tpl:270
 msgid "Notes"
 msgstr "备注"
 
 #: modules/candidates/dataGrids.php:56 modules/companies/dataGrids.php:86
-#: modules/joborders/dataGrids.php:87
+#: modules/contacts/dataGrids.php:82 modules/joborders/dataGrids.php:87
 msgid "Add To List"
 msgstr "添加到列表"
 
@@ -484,12 +511,13 @@ msgstr "发送邮件"
 
 #: modules/candidates/dataGrids.php:67 modules/candidates/dataGrids.php:127
 #: modules/companies/dataGrids.php:87 modules/companies/dataGrids.php:144
+#: modules/contacts/dataGrids.php:83 modules/contacts/dataGrids.php:137
 #: modules/joborders/dataGrids.php:88 modules/joborders/dataGrids.php:147
 msgid "Export"
 msgstr "导出"
 
 #: modules/candidates/dataGrids.php:121 modules/companies/dataGrids.php:143
-#: modules/joborders/dataGrids.php:146
+#: modules/contacts/dataGrids.php:136 modules/joborders/dataGrids.php:146
 msgid "Remove From This List"
 msgstr "从列表移除"
 
@@ -502,7 +530,8 @@ msgstr "公司"
 msgid "Add Company"
 msgstr "添加公司"
 
-#: modules/companies/Add.tpl:21
+#: modules/companies/Add.tpl:21 modules/contacts/Add.tpl:23
+#: modules/contacts/Edit.tpl:25
 msgid "Basic Information"
 msgstr "基本信息"
 
@@ -536,6 +565,7 @@ msgid "Departments"
 msgstr "部门"
 
 #: modules/companies/Add.tpl:126 modules/companies/Edit.tpl:67
+#: modules/contacts/Add.tpl:76 modules/contacts/Edit.tpl:79
 msgid "Edit Departments"
 msgstr "编辑部门"
 
@@ -573,8 +603,10 @@ msgid "Billing Contact"
 msgstr "账单联系人"
 
 #: modules/companies/Edit.tpl:48 modules/companies/Edit.tpl:210
-#: modules/joborders/Add.tpl:88 modules/joborders/Add.tpl:110
-#: modules/joborders/Add.tpl:290
+#: modules/contacts/Add.tpl:78 modules/contacts/Add.tpl:90
+#: modules/contacts/Edit.tpl:82 modules/contacts/Edit.tpl:101
+#: modules/contacts/Edit.tpl:103 modules/joborders/Add.tpl:88
+#: modules/joborders/Add.tpl:110 modules/joborders/Add.tpl:290
 msgid "None"
 msgstr "空白"
 
@@ -595,11 +627,11 @@ msgstr "是，同步这些地址。"
 msgid "No, leave addresses unmodified."
 msgstr "否，不修改这些地址。"
 
-#: modules/companies/Edit.tpl:245
+#: modules/companies/Edit.tpl:245 modules/contacts/Edit.tpl:276
 msgid "Save"
 msgstr "保存"
 
-#: modules/companies/Edit.tpl:247
+#: modules/companies/Edit.tpl:247 modules/contacts/Edit.tpl:278
 msgid "Back to Details"
 msgstr "返回详情页面"
 
@@ -611,18 +643,18 @@ msgstr "公司详情"
 msgid "Delete this attachment?"
 msgstr "删除这个附件？"
 
-#: modules/companies/Show.tpl:202
+#: modules/companies/Show.tpl:202 modules/contacts/Show.tpl:167
 msgid "More"
 msgstr "更多"
 
-#: modules/companies/Show.tpl:206
+#: modules/companies/Show.tpl:206 modules/contacts/Show.tpl:171
 msgid "Less"
 msgstr "更少"
 
-#: modules/companies/Show.tpl:241 modules/joborders/Add.tpl:14
-#: modules/joborders/AddModalPopup.tpl:6 modules/joborders/AddModalPopup.tpl:8
-#: modules/joborders/JobOrders.tpl:19 modules/joborders/Search.tpl:12
-#: modules/joborders/Search.tpl:14
+#: modules/companies/Show.tpl:241 modules/contacts/Show.tpl:224
+#: modules/joborders/Add.tpl:14 modules/joborders/AddModalPopup.tpl:6
+#: modules/joborders/AddModalPopup.tpl:8 modules/joborders/JobOrders.tpl:19
+#: modules/joborders/Search.tpl:12 modules/joborders/Search.tpl:14
 msgid "Job Orders"
 msgstr "职位"
 
@@ -632,15 +664,20 @@ msgstr "职位"
 msgid "Add Job Order"
 msgstr "添加职位"
 
-#: modules/companies/Show.tpl:297
+#: modules/companies/Show.tpl:297 modules/contacts/Add.tpl:14
+#: modules/contacts/Edit.tpl:14 modules/contacts/Search.tpl:14
+#: modules/contacts/Show.tpl:18
 msgid "Contacts"
 msgstr "联系人"
 
-#: modules/companies/Show.tpl:303 modules/joborders/Add.tpl:84
+#: modules/companies/Show.tpl:303 modules/contacts/Add.tpl:72
+#: modules/contacts/Edit.tpl:75 modules/contacts/Show.tpl:65
+#: modules/joborders/Add.tpl:84
 msgid "Department"
 msgstr "部门"
 
 #: modules/companies/Show.tpl:389 modules/companies/Show.tpl:390
+#: modules/contacts/Add.tpl:14 modules/contacts/Add.tpl:235
 msgid "Add Contact"
 msgstr "添加联系人"
 
@@ -652,6 +689,88 @@ msgstr "显示全部"
 msgid "Hide Some"
 msgstr "隐藏部分"
 
+#: modules/contacts/Add.tpl:52
+msgid "Internal Contact"
+msgstr "内部联系人"
+
+#: modules/contacts/Add.tpl:86 modules/contacts/Edit.tpl:96
+msgid "Reports to"
+msgstr "报告给"
+
+#: modules/contacts/Add.tpl:101 modules/contacts/Edit.tpl:117
+msgid "Hot Contact"
+msgstr "热门联系人"
+
+#: modules/contacts/Add.tpl:118 modules/contacts/Edit.tpl:140
+msgid "Contact Information"
+msgstr "联系信息"
+
+#: modules/contacts/Add.tpl:159 modules/contacts/Edit.tpl:179
+#: modules/contacts/Show.tpl:80
+msgid "Other Phone"
+msgstr "其它电话"
+
+#: modules/contacts/Add.tpl:237
+msgid "Back to Contacts"
+msgstr "返回联系人列表"
+
+#: modules/contacts/Contacts.tpl:32
+msgid "Only My Contacts"
+msgstr "仅显示我的联系人"
+
+#: modules/contacts/Contacts.tpl:36
+msgid "Only Hot Contacts"
+msgstr "仅显示热门候选人"
+
+#: modules/contacts/Edit.tpl:14
+msgid "Edit Contact"
+msgstr "编辑联系人"
+
+#: modules/contacts/Edit.tpl:125
+msgid "Left Company"
+msgstr ""
+
+#: modules/contacts/Search.tpl:14 modules/contacts/Search.tpl:18
+msgid "Search Contacts"
+msgstr "搜索联系人"
+
+#: modules/contacts/Show.tpl:18 modules/contacts/Show.tpl:22
+msgid "Contact Details"
+msgstr "联系人详情"
+
+#: modules/contacts/Show.tpl:54
+msgid "no longer associated with company"
+msgstr "不再关联到该公司"
+
+#: modules/contacts/Show.tpl:96
+msgid "Reports To"
+msgstr "报告给"
+
+#: modules/contacts/Show.tpl:231
+msgid "Modified"
+msgstr "修改"
+
+#: modules/contacts/Show.tpl:232
+msgid "Start"
+msgstr "开始日期"
+
+#: modules/contacts/Show.tpl:233
+msgid "Age"
+msgstr "时间"
+
+#: modules/contacts/Show.tpl:234
+msgid "S"
+msgstr "提交？"
+
+#: modules/contacts/Show.tpl:235
+msgid "P"
+msgstr "管线"
+
+#: modules/contacts/Show.tpl:236 modules/home/Home.tpl:36
+#: modules/joborders/Add.tpl:181
+msgid "Recruiter"
+msgstr "招聘人"
+
 #: modules/home/Home.tpl:13
 msgid "My Recent Calls"
 msgstr "最近的电话通知"
@@ -659,10 +778,6 @@ msgstr "最近的电话通知"
 #: modules/home/Home.tpl:30
 msgid "Recent Hires"
 msgstr "最近的成功招聘"
-
-#: modules/home/Home.tpl:36 modules/joborders/Add.tpl:181
-msgid "Recruiter"
-msgstr "招聘人"
 
 #: modules/home/Home.tpl:57 modules/home/Home.tpl:66
 msgid "Hiring Overview"

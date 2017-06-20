@@ -29,11 +29,11 @@
                                     </td>
                                     <td valign="top" align="right" nowrap="nowrap">
                                         <input type="checkbox" name="onlyMyCompanies" id="onlyMyContacts" <?php if ($this->dataGrid->getFilterValue('OwnerID') ==  $this->userID): ?>checked<?php endif; ?> onclick="<?php echo $this->dataGrid->getJSAddRemoveFilterFromCheckbox('OwnerID', '==',  $this->userID); ?>" />
-                                        <label for="onlyMyContacts">Only My Contacts</label>&nbsp;
+                                        <label for="onlyMyContacts"><?php echo _('Only My Contacts'); ?></label>&nbsp;
                                     </td>
                                     <td valign="top" align="right" nowrap="nowrap">
                                         <input type="checkbox" name="onlyHotCompanies" id="onlyHotContacts" <?php if ($this->dataGrid->getFilterValue('IsHot') == '1'): ?>checked<?php endif; ?> onclick="<?php echo $this->dataGrid->getJSAddRemoveFilterFromCheckbox('IsHot', '==', '\'1\''); ?>" />
-                                        <label for="onlyHotContacts">Only Hot Contacts</label>&nbsp;
+                                        <label for="onlyHotContacts"><?php echo _('Only Hot Contacts'); ?></label>&nbsp;
                                     </td>
                                 </tr>
                             </table>

@@ -11,7 +11,7 @@
                     <td width="3%">
                         <img src="images/contact.gif" width="24" height="24" border="0" alt="Contacts" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Contacts: Edit Contact</h2></td>
+                    <td><h2><?php echo _('Contacts'); ?>: <?php echo _('Edit Contact'); ?></h2></td>
                 </tr>
             </table>
 
@@ -22,12 +22,12 @@
                 <table>
                     <tr>
                         <td width="50%" height="100%" valign="top">
-                            <p class="noteUnsized">Basic Information</p>
+                            <p class="noteUnsized"><?php echo _('Basic Information'); ?></p>
 
                             <table class="editTable" width="100%" height="285">
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="firstNameLabel" for="firstName">First Name:</label>
+                                        <label id="firstNameLabel" for="firstName"><?php echo _('First Name'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="firstName" id="firstName" value="<?php $this->_($this->data['firstName']); ?>" class="inputbox" style="width: 150px" />&nbsp;*
@@ -36,7 +36,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="lastNameLabel" for="lastName">Last Name:</label>
+                                        <label id="lastNameLabel" for="lastName"><?php echo _('Last Name'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="lastName" id="lastName" value="<?php $this->_($this->data['lastName']); ?>" class="inputbox" style="width: 150px" />&nbsp;*
@@ -63,7 +63,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="titleLabel" for="title">Title:</label>
+                                        <label id="titleLabel" for="title"><?php echo _('Title'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="title" id="title" value="<?php $this->_($this->data['title']); ?>" class="inputbox" style="width: 150px" />&nbsp;*
@@ -72,14 +72,14 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="departmentLabel" for="department">Department:</label>
+                                        <label id="departmentLabel" for="department"><?php echo _('Department'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <select id="departmentSelect" name="department" class="inputbox" style="width: 150px;" onchange="if (this.value == 'edit') { listEditor('Departments', 'departmentSelect', 'departmentsCSV', false); this.value = '(none)'; } if (this.value == 'nullline') { this.value = '(none)'; }">
-                                            <option value="edit">(Edit Departments)</option>
+                                            <option value="edit">(<?php echo _('Edit Departments'); ?>)</option>
                                             <option value="nullline">-------------------------------</option>
                                             <?php if ($this->data['departmentID'] == 0): ?>
-                                                <option value="(none)" selected="selected">(None)</option>
+                                                <option value="(none)" selected="selected">(<?php echo _('None'); ?>)</option>
                                             <?php else: ?>
                                                 <option value="(none)">(None)</option>
                                             <?php endif; ?>
@@ -93,14 +93,14 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="departmentLabel" for="department">Reports to:</label>
+                                        <label id="departmentLabel" for="department"><?php echo _('Reports to'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <select id="reportsTo" name="reportsTo" class="inputbox" style="width: 150px;" >
                                             <?php if ($this->data['reportsTo'] == -1): ?>
-                                                <option value="(none)" selected="selected">(None)</option>
+                                                <option value="(none)" selected="selected">(<?php echo _('None'); ?>)</option>
                                             <?php else: ?>
-                                                <option value="(none)">(None)</option>
+                                                <option value="(none)">(<?php echo _('None'); ?>)</option>
                                             <?php endif; ?>
                                             <?php foreach ($this->reportsToRS as $index => $contact): ?>
                                                 <?php if ($contact['contactID'] != $this->contactID): ?>
@@ -114,7 +114,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="isHotLabel" for="isHot">Hot Contact:</label>
+                                        <label id="isHotLabel" for="isHot"><?php echo _('Hot Contact'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="checkbox" id="isHot" name="isHot"<?php if ($this->data['isHotContact'] == 1): ?> checked<?php endif; ?> />&nbsp;
@@ -122,7 +122,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="tdVertical">Left Company:</td>
+                                    <td class="tdVertical"><?php echo _('Left Company'); ?>:</td>
                                     <td class="tdData">
                                         <input type="checkbox" id="leftCompany" name="leftCompany"<?php if ($this->data['leftCompany'] == 1): ?> checked<?php endif; ?> onclick="if (document.getElementById('leftCompany').checked) document.getElementById('companyAssociatedLabel').style.display=''; else document.getElementById('companyAssociatedLabel').style.display='none';" />&nbsp;
                                     </td>
@@ -137,12 +137,12 @@
                         </td>
 
                         <td width="50%" height="100%" valign="top">
-                            <p class="noteUnsized">Contact Information</p>
+                            <p class="noteUnsized"><?php echo _('Contact Information'); ?></p>
 
                             <table class="editTable" width="100%" height="285">
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="email1Label" for="email1">E-Mail:</label>
+                                        <label id="email1Label" for="email1"><?php echo _('E-Mail'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="email1" id="email1" value="<?php $this->_($this->data['email1']); ?>" class="inputbox" style="width: 150px" />
@@ -151,7 +151,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="email2Label" for="email2">2nd E-Mail:</label>
+                                        <label id="email2Label" for="email2"><?php echo _('2nd E-Mail'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="email2" id="email2" value="<?php $this->_($this->data['email2']); ?>" class="inputbox" style="width: 150px" />
@@ -160,14 +160,14 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="phoneWorkLabel" for="phoneWork">Work Phone:</label>
+                                        <label id="phoneWorkLabel" for="phoneWork"><?php echo _('Work Phone'); ?>:</label>
                                     </td>
                                     <td class="tdData"><input type="text" name="phoneWork" id="phoneWork" value="<?php $this->_($this->data['phoneWork']); ?>" class="inputbox" style="width: 150px" /></td>
                                 </tr>
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="phoneCellLabel" for="phoneCell">Cell Phone:</label>
+                                        <label id="phoneCellLabel" for="phoneCell"><?php echo _('Cell Phone'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="phoneCell" id="phoneCell" value="<?php $this->_($this->data['phoneCell']); ?>" class="inputbox" style="width: 150px" />
@@ -176,7 +176,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="phoneOtherLabel" for="phoneOther">Other Phone:</label>
+                                        <label id="phoneOtherLabel" for="phoneOther"><?php echo _('Other Phone'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="phoneOther" id="phoneOther" value="<?php $this->_($this->data['phoneOther']); ?>" class="inputbox" style="width: 150px" />
@@ -185,7 +185,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="addressLabel" for="address">Address:</label>
+                                        <label id="addressLabel" for="address"><?php echo _('Address'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <textarea name="address" id="address" class="inputbox" style="width: 150px"><?php $this->_($this->data['address']); ?></textarea>
@@ -194,7 +194,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="cityLabel" for="city">City:</label>
+                                        <label id="cityLabel" for="city"><?php echo _('City'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="city" id="city" value="<?php $this->_($this->data['city']); ?>" class="inputbox" style="width: 150px" />
@@ -203,7 +203,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="stateLabel" for="state">State:</label>
+                                        <label id="stateLabel" for="state"><?php echo _('State'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="state" id="state" value="<?php $this->_($this->data['state']); ?>" class="inputbox" style="width: 150px" />
@@ -212,7 +212,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="zipLabel" for="zip">Postal Code:</label>
+                                        <label id="zipLabel" for="zip"><?php echo _('Postal Code'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="zip" id="zip" value="<?php $this->_($this->data['zip']); ?>" class="inputbox" style="width: 150px" />
@@ -244,7 +244,7 @@
                     
                     <tr>
                         <td class="tdVertical">
-                            <label id="ownerLabel" for="owner">Owner:</label>
+                            <label id="ownerLabel" for="owner"><?php echo _('Owner'); ?>:</label>
                         </td>
                         <td class="tdData">
                             <select id="owner" name="owner" class="inputbox" style="width: 150px;" <?php if (!$this->emailTemplateDisabled): ?>onchange="document.getElementById('divOwnershipChange').style.display=''; <?php if ($this->canEmail): ?>document.getElementById('checkboxOwnershipChange').checked=true;<?php endif; ?>"<?php endif; ?>>
@@ -266,16 +266,16 @@
 
                     <tr>
                         <td class="tdVertical">
-                            <label id="notesLabel" for="notes">Misc. Notes:</label>
+                            <label id="notesLabel" for="notes"><?php echo _('Misc. Notes'); ?>:</label>
                         </td>
                         <td class="tdData">
                             <textarea class="inputbox" name="notes" id="notes" rows="5" style="width: 400px;"><?php $this->_($this->data['notes']); ?></textarea>
                         </td>
                     </tr>
                 </table>
-                <input type="submit" class="button" name="submit" id="submit" value="Save" />&nbsp;
-                <input type="reset"  class="button" name="reset"  id="reset"  value="Reset" />&nbsp;
-                <input type="button" class="button" name="back"   id="back"   value="Back to Details" onclick="javascript:goToURL('<?php echo(CATSUtility::getIndexName()); ?>?m=contacts&amp;a=show&amp;contactID=<?php echo($this->contactID); ?>');" />
+                <input type="submit" class="button" name="submit" id="submit" value="<?php echo _('Save'); ?>" />&nbsp;
+                <input type="reset"  class="button" name="reset"  id="reset"  value="<?php echo _('Reset'); ?>" />&nbsp;
+                <input type="button" class="button" name="back"   id="back"   value="<?php echo _('Back to Details'); ?>" onclick="javascript:goToURL('<?php echo(CATSUtility::getIndexName()); ?>?m=contacts&amp;a=show&amp;contactID=<?php echo($this->contactID); ?>');" />
             </form>
 
             <script type="text/javascript">

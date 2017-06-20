@@ -11,11 +11,11 @@
                     <td width="3%">
                         <img src="images/contact.gif" width="24" height="24" border="0" alt="Contacts" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Contacts: Search Contacts</h2></td>
+                    <td><h2><?php echo _('Contacts'); ?>: <?php echo _('Search Contacts'); ?></h2></td>
                 </tr>
             </table>
 
-            <p class="note">Search Contacts</p>
+            <p class="note"><?php echo _('Search Contacts'); ?></p>
 
             <table class="searchTable" id="searchTable ">
                 <tr>

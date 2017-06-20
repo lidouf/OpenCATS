@@ -11,7 +11,7 @@
                     <td width="3%">
                         <img src="images/contact.gif" width="24" height="24" border="0" alt="Contacts" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Contacts: Add Contact</h2></td>
+                    <td><h2><?php echo _('Contacts'); ?>: <?php echo _('Add Contact'); ?></h2></td>
                 </tr>
             </table>
 
@@ -20,12 +20,12 @@
                 <table>
                     <tr>
                         <td width="50%" height="100%" valign="top">
-                            <p class="noteUnsized">Basic Information</p>
+                            <p class="noteUnsized"><?php echo _('Basic Information'); ?></p>
 
                             <table class="editTable" width="100%" height="285">
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="firstNameLabel" for="firstName">First Name:</label>
+                                        <label id="firstNameLabel" for="firstName"><?php echo _('First Name'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="firstName" id="firstName" class="inputbox" style="width: 150px" />&nbsp;*
@@ -34,7 +34,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="lastNameLabel" for="lastName">Last Name:</label>
+                                        <label id="lastNameLabel" for="lastName"><?php echo _('Last Name'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="lastName" id="lastName" class="inputbox" style="width: 150px" />&nbsp;*
@@ -43,13 +43,13 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="companyIDLabel" for="companyID">Company:</label>
+                                        <label id="companyIDLabel" for="companyID"><?php echo _('Company'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="hidden" name="companyID" id="companyID" value="<?php if ($this->selectedCompanyID === false) { echo(0); } else { echo($this->selectedCompanyID); } ?>" />
                                         <input type="text" name="companyName" id="companyName" value="<?php if ($this->selectedCompanyID !== false) { $this->_($this->companyRS['name']); } ?>" class="inputbox" style="width: 150px" onFocus="suggestListActivate('getCompanyNames', 'companyName', 'CompanyResults', 'companyID', 'ajaxTextEntryHover', 0, '<?php echo($this->sessionCookie); ?>', 'helpShim');" <?php if ($this->selectedCompanyID !== false) { echo('disabled'); } ?>/>&nbsp;*
                                         <?php if ($this->defaultCompanyID !== false && $this->selectedCompanyID === false): ?>
-                                            <input type="checkbox" id="defaultCompany" onchange="if (this.checked){ document.getElementById('companyName').disabled = true; document.getElementById('companyID').value = '<?php echo($this->defaultCompanyID); ?>'; document.getElementById('companyName').value = &quot;<?php $this->_($this->defaultCompanyRS['name']); ?>&quot;; } else { document.getElementById('companyName').disabled = false; }">&nbsp;Internal Contact
+                                            <input type="checkbox" id="defaultCompany" onchange="if (this.checked){ document.getElementById('companyName').disabled = true; document.getElementById('companyID').value = '<?php echo($this->defaultCompanyID); ?>'; document.getElementById('companyName').value = &quot;<?php $this->_($this->defaultCompanyRS['name']); ?>&quot;; } else { document.getElementById('companyName').disabled = false; }">&nbsp;<?php echo _('Internal Contact'); ?>
                                         <?php endif; ?>
                                         <script type="text/javascript">watchCompanyIDChange('<?php echo($this->sessionCookie); ?>');</script>
                                         <br />
@@ -60,7 +60,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="titleLabel" for="title">Title:</label>
+                                        <label id="titleLabel" for="title"><?php echo _('Title'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="title" id="title" class="inputbox" style="width: 150px" />&nbsp;*
@@ -69,13 +69,13 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="departmentLabel" for="department">Department:</label>
+                                        <label id="departmentLabel" for="department"><?php echo _('Department'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <select id="departmentSelect" name="department" class="inputbox" style="width: 150px;" onchange="if (this.value == 'edit') { listEditor('Departments', 'departmentSelect', 'departmentsCSV', false); this.value = '(none)'; } if (this.value == 'nullline') { this.value = '(none)'; }">
-                                            <option value="edit">(Edit Departments)</option>
+                                            <option value="edit">(<?php echo _('Edit Departments'); ?>)</option>
                                             <option value="nullline">-------------------------------</option>
-                                            <option value="(none)" selected="selected">(None)</option>
+                                            <option value="(none)" selected="selected">(<?php echo _('None'); ?>)</option>
                                         </select>
                                         <input type="hidden" id="departmentsCSV" name="departmentsCSV" value="" />
                                     </td>
@@ -83,11 +83,11 @@
 
                                  <tr>
                                     <td class="tdVertical">
-                                        <label id="departmentLabel" for="department">Reports to:</label>
+                                        <label id="departmentLabel" for="department"><?php echo _('Reports to'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <select id="reportsTo" name="reportsTo" class="inputbox" style="width: 150px;" >
-                                            <option value="(none)" selected="selected">(None)</option>
+                                            <option value="(none)" selected="selected">(<?php echo _('None'); ?>)</option>
                                             <?php foreach ($this->reportsToRS as $index => $contact): ?>
                                                 <option value="<?php $this->_($contact['contactID']); ?>"><?php $this->_($contact['firstName'] . ' ' . $contact['lastName']); ?></option>
                                             <?php endforeach; ?>
@@ -98,7 +98,7 @@
                                 
                                <tr>
                                     <td class="tdVertical">
-                                        <label id="isHotLabel" for="isHot">Hot Contact:</label>
+                                        <label id="isHotLabel" for="isHot"><?php echo _('Hot Contact'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="checkbox" id="isHot" name="isHot" />&nbsp;
@@ -115,12 +115,12 @@
                         </td>
 
                         <td width="50%" height="100%" valign="top">
-                            <p class="noteUnsized">Contact Information</p>
+                            <p class="noteUnsized"><?php echo _('Contact Information'); ?></p>
 
                             <table class="editTable" width="100%" height="285">
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="email1Label" for="email1">E-Mail:</label>
+                                        <label id="email1Label" for="email1"><?php echo _('E-Mail'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="email1" id="email1" class="inputbox" style="width: 150px" />
@@ -129,7 +129,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="email2Label" for="email2">2nd E-Mail:</label>
+                                        <label id="email2Label" for="email2"><?php echo _('2nd E-Mail'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="email2" id="email2" class="inputbox" style="width: 150px" />
@@ -138,7 +138,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="phoneWorkLabel" for="phoneWork">Work Phone:</label>
+                                        <label id="phoneWorkLabel" for="phoneWork"><?php echo _('Work Phone'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="phoneWork" id="phoneWork" class="inputbox" style="width: 150px" />
@@ -147,7 +147,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="phoneCellLabel" for="phoneCell">Cell Phone:</label>
+                                        <label id="phoneCellLabel" for="phoneCell"><?php echo _('Cell Phone'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="phoneCell" id="phoneCell" class="inputbox" style="width: 150px" />
@@ -156,7 +156,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="phoneOtherLabel" for="phoneOther">Other Phone:</label>
+                                        <label id="phoneOtherLabel" for="phoneOther"><?php echo _('Other Phone'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="phoneOther" id="phoneOther" class="inputbox" style="width: 150px" />
@@ -165,7 +165,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="addressLabel" for="address">Address:</label>
+                                        <label id="addressLabel" for="address"><?php echo _('Address'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <textarea name="address" id="address" class="inputbox" style="width: 150px"></textarea>
@@ -174,7 +174,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="cityLabel" for="city">City:</label>
+                                        <label id="cityLabel" for="city"><?php echo _('City'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="city" id="city" class="inputbox" style="width: 150px" />
@@ -183,7 +183,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="stateLabel" for="state">State:</label>
+                                        <label id="stateLabel" for="state"><?php echo _('State'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="state" id="state" class="inputbox" style="width: 150px" />
@@ -192,7 +192,7 @@
 
                                 <tr>
                                     <td class="tdVertical">
-                                        <label id="zipLabel" for="zip">Postal Code:</label>
+                                        <label id="zipLabel" for="zip"><?php echo _('Postal Code'); ?>:</label>
                                     </td>
                                     <td class="tdData">
                                         <input type="text" name="zip" id="zip" class="inputbox" style="width: 150px" />&nbsp;
@@ -206,7 +206,7 @@
                     </tr>
                 </table>
 
-                <p class="note">Other</p>
+                <p class="note"><?php echo _('Other'); ?></p>
 
                 <table class="editTable">
                     
@@ -225,16 +225,16 @@
 
                     <tr>
                         <td class="tdVertical">
-                            <label id="notesLabel" for="notes">Misc. Notes:</label>
+                            <label id="notesLabel" for="notes"><?php echo _('Misc. Notes'); ?>:</label>
                         </td>
                         <td class="tdData">
                             <textarea class="inputbox" name="notes" id="notes" rows="5" style="width: 400px;"></textarea>
                         </td>
                     </tr>
                 </table>
-                <input type="submit" class="button" value="Add Contact" />&nbsp;
-                <input type="reset"  class="button" value="Reset" />&nbsp;
-                <input type="button" class="button" value="Back to Contacts" onclick="javascript:goToURL('<?php echo(CATSUtility::getIndexName()); ?>?m=contacts&amp;a=listRecent');" />
+                <input type="submit" class="button" value="<?php echo _('Add Contact'); ?>" />&nbsp;
+                <input type="reset"  class="button" value="<?php echo _('Reset'); ?>" />&nbsp;
+                <input type="button" class="button" value="<?php echo _('Back to Contacts'); ?>" onclick="javascript:goToURL('<?php echo(CATSUtility::getIndexName()); ?>?m=contacts&amp;a=listRecent');" />
             </form>
 
             <script type="text/javascript">

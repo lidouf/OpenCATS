@@ -14,7 +14,7 @@ use OpenCATS\UI\QuickActionMenu;
                     <td width="3%">
                         <img src="images/companies.gif" width="24" height="24" border="0" alt="Companies" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Companies: Company Details</h2></td>
+                    <td><h2><?php echo _('Companies'); ?>: <?php echo _('Company Details'); ?></h2></td>
                </tr>
             </table>
 
@@ -25,7 +25,7 @@ use OpenCATS\UI\QuickActionMenu;
                     <td width="50%" height="100%">
                         <table class="detailsInside" height="100%">
                             <tr>
-                                <td class="vertical">Name:</td>
+                                <td class="vertical"><?php echo _('Name'); ?>:</td>
                                 <td class="data">
                                     <span class="<?php echo($this->data['titleClass']); ?>"><?php $this->_($this->data['name']); ?></span>
                                     <?php TemplateUtility::printSingleQuickActionMenu(new QuickActionMenu(DATA_ITEM_COMPANY, $this->companyID, $_SESSION['CATS']->getAccessLevel('companies.edit'))); ?>
@@ -35,22 +35,22 @@ use OpenCATS\UI\QuickActionMenu;
                             <!-- CONTACT INFO -->
 
                             <tr>
-                                <td class="vertical">Primary Phone:</td>
+                                <td class="vertical"><?php echo _('Primary Phone'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['phone1']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Secondary Phone:</td>
+                                <td class="vertical"><?php echo _('Secondary Phone'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['phone2']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Fax Number:</td>
+                                <td class="vertical"><?php echo _('Fax Number'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['faxNumber']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Address:</td>
+                                <td class="vertical"><?php echo _('Address'); ?>:</td>
                                 <td class="data"><?php echo(nl2br(htmlspecialchars($this->data['address']))); ?>&nbsp;
                                 <?php echo($this->data['googleMaps']); ?></td>
                             </tr>
@@ -79,7 +79,7 @@ use OpenCATS\UI\QuickActionMenu;
                         <!-- CONTACT INFO -->
 
                             <tr>
-                                <td class="vertical">Billing Contact:</td>
+                                <td class="vertical"><?php echo _('Billing Contact'); ?>:</td>
                                 <td class="data">
                                     <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=contacts&amp;a=show&amp;contactID=<?php echo($this->data['billingContact']); ?>">
                                         <?php $this->_($this->data['billingContactFullName']); ?>
@@ -88,7 +88,7 @@ use OpenCATS\UI\QuickActionMenu;
                             </tr>
 
                             <tr>
-                                <td class="vertical">Web Site:</td>
+                                <td class="vertical"><?php echo _('Web Site'); ?>:</td>
                                 <td class="data">
                                     <a href="<?php $this->_($this->data['url']); ?>" target="_blank">
                                         <?php $this->_($this->data['url']); ?>
@@ -99,17 +99,17 @@ use OpenCATS\UI\QuickActionMenu;
                         <!-- /CONTACT INFO -->
 
                             <tr>
-                                <td class="vertical">Key Technologies:</td>
+                                <td class="vertical"><?php echo _('Key Technologies'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['keyTechnologies']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Created:</td>
+                                <td class="vertical"><?php echo _('Created'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['dateCreated']); ?> (<?php $this->_($this->data['enteredByFullName']); ?>)</td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Owner:</td>
+                                <td class="vertical"><?php echo _('Owner'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['ownerFullName']); ?></td>
                             </tr>
 
@@ -139,7 +139,7 @@ use OpenCATS\UI\QuickActionMenu;
                         <td>
                             <table class="detailsInside">
                                 <tr>
-                                    <td valign="top" class="vertical">Departments:</td>
+                                    <td valign="top" class="vertical"><?php echo _('Departments'); ?>:</td>
                                     <td valign="top" class="data">
                                         <?php foreach ($this->departmentsRS as $departmentRecord): ?>
                                             <?php $this->_($departmentRecord['name']); ?>
@@ -160,7 +160,7 @@ use OpenCATS\UI\QuickActionMenu;
                     <td>
                         <table class="detailsInside">
                             <tr>
-                                <td valign="top" class="vertical">Attachments:</td>
+                                <td valign="top" class="vertical"><?php echo _('Attachments'); ?>:</td>
                                 <td valign="top" class="data">
                                     <table class="attachmentsTable">
                                         <?php foreach ($this->attachmentsRS as $rowNumber => $attachmentsData): ?>
@@ -175,7 +175,7 @@ use OpenCATS\UI\QuickActionMenu;
                                                 <td><?php $this->_($attachmentsData['dateCreated']) ?></td>
                                                 <td>
                                                     <?php if ($this->getUserAccessLevel('companies.deleteAttachment') >= ACCESS_LEVEL_DELETE): ?>
-                                                        <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=companies&amp;a=deleteAttachment&amp;companyID=<?php echo($this->companyID); ?>&amp;attachmentID=<?php $this->_($attachmentsData['attachmentID']) ?>"  title="Delete" onclick="javascript:return confirm('Delete this attachment?');">
+                                                        <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=companies&amp;a=deleteAttachment&amp;companyID=<?php echo($this->companyID); ?>&amp;attachmentID=<?php $this->_($attachmentsData['attachmentID']) ?>"  title="Delete" onclick="javascript:return confirm('<?php echo _('Delete this attachment?'); ?>');">
                                                             <img src="images/actions/delete.gif" alt="" width="16" height="16" border="0" />
                                                         </a>
                                                     <?php endif; ?>
@@ -189,21 +189,21 @@ use OpenCATS\UI\QuickActionMenu;
                                             <?php else: ?>
                                                 <a href="#" onclick="showPopWin('<?php echo(CATSUtility::getIndexName()); ?>?m=companies&amp;a=createAttachment&amp;companyID=<?php echo($this->companyID); ?>', 400, 125, null); return false;">
                                             <?php endif; ?>
-                                            <img src="images/paperclip_add.gif" width="16" height="16" border="0" alt="add attachment" class="absmiddle" />&nbsp;Add Attachment
+                                            <img src="images/paperclip_add.gif" width="16" height="16" border="0" alt="add attachment" class="absmiddle" />&nbsp;<?php echo _('Add Attachment'); ?>
                                         </a>
                                     <?php endif; ?>
                                 </td>
                             </tr>
                             <tr>
-                                <td valign="top" class="vertical">Misc. Notes:</td>
+                                <td valign="top" class="vertical"><?php echo _('Misc. Notes'); ?>:</td>
                                 <?php if ($this->isShortNotes): ?>
                                     <td id="shortNotes" style="display:block;" class="data">
                                         <?php echo($this->data['shortNotes']); ?><span class="moreText">...</span>&nbsp;
-                                        <p><a href="#" class="moreText" onclick="toggleNotes(); return false;">[More]</a></p>
+                                        <p><a href="#" class="moreText" onclick="toggleNotes(); return false;">[<?php echo _('More'); ?>]</a></p>
                                     </td>
                                     <td id="fullNotes" style="display:none;" class="data">
                                         <?php echo($this->data['notes']); ?>&nbsp;
-                                        <p><a href="#" class="moreText" onclick="toggleNotes(); return false;">[Less]</a></p>
+                                        <p><a href="#" class="moreText" onclick="toggleNotes(); return false;">[<?php echo _('Less'); ?>]</a></p>
                                     </td>
                                 <?php else: ?>
                                     <td id="shortNotes" style="display:block;" class="data">
@@ -219,26 +219,26 @@ use OpenCATS\UI\QuickActionMenu;
 
             <?php if ($this->getUserAccessLevel('companies.edit') >= ACCESS_LEVEL_EDIT): ?>
                 <a id="edit_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=companies&amp;a=edit&amp;companyID=<?php echo($this->companyID); ?>">
-                    <img src="images/actions/edit.gif" width="16" height="16" class="absmiddle" alt="edit" border="0" />&nbsp;Edit
+                    <img src="images/actions/edit.gif" width="16" height="16" class="absmiddle" alt="edit" border="0" />&nbsp;<?php echo _('Edit'); ?>
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
             <?php endif; ?>
             <?php if ($this->getUserAccessLevel('companies.delete') >= ACCESS_LEVEL_DELETE && $this->data['defaultCompany'] != 1): ?>
                 <a id="delete_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=companies&amp;a=delete&amp;companyID=<?php echo($this->companyID); ?>" onclick="javascript:return confirm('Delete this company?');">
-                    <img src="images/actions/delete.gif" width="16" height="16" class="absmiddle" alt="delete" border="0" />&nbsp;Delete
+                    <img src="images/actions/delete.gif" width="16" height="16" class="absmiddle" alt="delete" border="0" />&nbsp;<?php echo _('Delete'); ?>
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
             <?php endif; ?>
             <?php if ($this->privledgedUser): ?>
                 <a id="history_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=viewItemHistory&amp;dataItemType=200&amp;dataItemID=<?php echo($this->companyID); ?>">
-                    <img src="images/icon_clock.gif" width="16" height="16" class="absmiddle"  border="0" />&nbsp;View History
+                    <img src="images/icon_clock.gif" width="16" height="16" class="absmiddle"  border="0" />&nbsp;<?php echo _('View History'); ?>
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
             <?php endif; ?>
             <br clear="all" />
             <br />
 
-            <p class="note">Job Orders</p>
+            <p class="note"><?php echo _('Job Orders'); ?></p>
             <table class="sortable">
                 <tr>
                     <th align="left" width="30" nowrap="nowrap">ID</th>
@@ -286,26 +286,26 @@ use OpenCATS\UI\QuickActionMenu;
             </table>
 
             <?php if ($this->getUserAccessLevel('joborders.add') >= ACCESS_LEVEL_EDIT): ?>
-                <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=joborders&amp;a=add&amp;selected_company_id=<?php echo($this->companyID); ?>" title="Add Job Order">
-                    <img src="images/actions/job_order.gif" width="16" height="16" class="absmiddle" alt="New Job Order" border="0" />&nbsp;Add Job Order
+                <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=joborders&amp;a=add&amp;selected_company_id=<?php echo($this->companyID); ?>" title="<?php echo _('Add Job Order'); ?>">
+                    <img src="images/actions/job_order.gif" width="16" height="16" class="absmiddle" alt="New Job Order" border="0" />&nbsp;<?php echo _('Add Job Order'); ?>
                 </a>
             <?php endif; ?>
             <br clear="all" />
             <br />
 
             <!-- CONTACT INFO -->
-            <p class="note">Contacts</p>
+            <p class="note"><?php echo _('Contacts'); ?></p>
             <table class="sortable">
                 <tr>
-                    <th align="left" nowrap="nowrap">First Name</th>
-                    <th align="left" nowrap="nowrap">Last Name</th>
-                    <th align="left">Title</th>
-                    <th align="left">Department</th>
-                    <th align="left" nowrap="nowrap">Work Phone</th>
-                    <th align="left" nowrap="nowrap">Cell Phone</th>
-                    <th align="left">Created</th>
-                    <th align="left">Owner</th>
-                    <th align="center">Action</th>
+                    <th align="left" nowrap="nowrap"><?php echo _('First Name'); ?></th>
+                    <th align="left" nowrap="nowrap"><?php echo _('Last Name'); ?></th>
+                    <th align="left"><?php echo _('Title'); ?></th>
+                    <th align="left"><?php echo _('Department'); ?></th>
+                    <th align="left" nowrap="nowrap"><?php echo _('Work Phone'); ?></th>
+                    <th align="left" nowrap="nowrap"><?php echo _('Cell Phone'); ?></th>
+                    <th align="left"><?php echo _('Created'); ?></th>
+                    <th align="left"><?php echo _('Owner'); ?></th>
+                    <th align="center"><?php echo _('Action'); ?></th>
                 </tr>
 
                 <?php if (count($this->contactsRSWC) != 0): ?>
@@ -386,18 +386,18 @@ use OpenCATS\UI\QuickActionMenu;
             </table>
 
             <?php if ($this->getUserAccessLevel('contacts.add') >= ACCESS_LEVEL_EDIT): ?>
-                <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=contacts&amp;a=add&amp;selected_company_id=<?php echo($this->companyID); ?>" title="Add Contact">
-                    <img src="images/actions/add_contact.gif" width="16" height="16" class="absmiddle" alt="add contact" border="0" title="Add Contact"/>&nbsp;Add Contact
+                <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=contacts&amp;a=add&amp;selected_company_id=<?php echo($this->companyID); ?>" title="<?php echo _('Add Contact'); ?>">
+                    <img src="images/actions/add_contact.gif" width="16" height="16" class="absmiddle" alt="add contact" border="0" title="Add Contact"/>&nbsp;<?php echo _('Add Contact'); ?>
                 </a>
             <?php endif; ?>
             <?php if (count($this->contactsRSWC) != count($this->contactsRS)) : ?>
                 &nbsp;
                 <a href="javascript:void(0)" id="linkShowAll" onclick="javascript:for (i = 0; i< <?php echo(count($this->contactsRSWC)); ?>; i++) document.getElementById('ContactsDefault'+i).style.display='none'; for (i = 0; i< <?php echo(count($this->contactsRS)); ?>; i++) document.getElementById('ContactsFull'+i).style.display=''; document.getElementById('linkShowAll').style.display='none'; document.getElementById('linkHideSome').style.display='';">
-                    <img src="images/actions/add_contact.gif" width="16" height="16" class="absmiddle" alt="add contact" border="0" title="Show All"/>
+                    <img src="images/actions/add_contact.gif" width="16" height="16" class="absmiddle" alt="add contact" border="0" title="<?php echo _('Show All'); ?>"/>
                     &nbsp;Show contacts who have left (<?php echo(count($this->contactsRS) - count($this->contactsRSWC)); ?>)
                 </a>
                 <a href="javascript:void(0)" id="linkHideSome" style="display:none;" onclick="javascript:for (i = 0; i< <?php echo(count($this->contactsRSWC)); ?>; i++) document.getElementById('ContactsDefault'+i).style.display=''; for (i = 0; i< <?php echo(count($this->contactsRS)); ?>; i++) document.getElementById('ContactsFull'+i).style.display='none'; document.getElementById('linkShowAll').style.display=''; document.getElementById('linkHideSome').style.display='none';">
-                    <img src="images/actions/add_contact.gif" width="16" height="16" class="absmiddle" alt="add contact" border="0" title="Hide Some"/>
+                    <img src="images/actions/add_contact.gif" width="16" height="16" class="absmiddle" alt="add contact" border="0" title="<?php echo _('Hide Some'); ?>"/>
                     &nbsp;Hide contacts who have left (<?php echo(count($this->contactsRS) - count($this->contactsRSWC)); ?>)
                 </a>
             <?php endif; ?>

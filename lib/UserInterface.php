@@ -30,6 +30,8 @@
  * @version    $Id: UserInterface.php 3593 2007-11-13 17:36:57Z andrew $
  */
 
+include_once('Locale.php');
+
 /**
  *	User Interface Library
  *	@package    CATS
@@ -64,6 +66,15 @@ class UserInterface
             $this->_siteID = $_SESSION['CATS']->getSiteID();
 
         }
+
+        $this->setLang();
+    }
+
+    protected function setLang() {
+        //TODO: get lang param by session/get/post...
+        $lang = 'zh_CN';
+        putenv('LANG=' . $lang);
+        setlocale(LC_ALL, $lang);
     }
 
     /**

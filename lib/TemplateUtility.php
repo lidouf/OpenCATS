@@ -39,6 +39,7 @@ include_once('./vendor/autoload.php');
 include_once('Candidates.php');
 include_once('DateUtility.php');
 include_once('SystemInfo.php');
+include_once('Locale.php');
 
 use OpenCATS\UI\QuickActionMenu;
 
@@ -264,7 +265,7 @@ class TemplateUtility
 
         if (!empty($MRU))
         {
-            echo '<span class="MRUTitle">Recent:&nbsp;</span>&nbsp;', $MRU, "\n";
+            echo '<span class="MRUTitle">', _('Recent:'), '&nbsp;</span>&nbsp;', $MRU, "\n";
         }
         else
         {
@@ -283,13 +284,13 @@ class TemplateUtility
         {
             echo '<input type="hidden" name="m" value="asp" />', "\n";
             echo '<input type="hidden" name="a" value="aspSearch" />', "\n";
-            echo '<span class="quickSearchLabel" id="quickSearchLabel">ASP Search:</span>&nbsp;', "\n";
+            echo '<span class="quickSearchLabel" id="quickSearchLabel">', _('ASP Search:') ,'</span>&nbsp;', "\n";
         }
         else
         {
             echo '<input type="hidden" name="m" value="home" />', "\n";
             echo '<input type="hidden" name="a" value="quickSearch" />', "\n";
-            echo '<span class="quickSearchLabel" id="quickSearchLabel">Quick Search:</span>&nbsp;', "\n";
+            echo '<span class="quickSearchLabel" id="quickSearchLabel">', _('Quick Search:') ,'</span>&nbsp;', "\n";
         }
 
         echo '<input name="quickSearchFor" id="quickSearchFor" class="quickSearchBox" value="',
@@ -607,7 +608,7 @@ class TemplateUtility
             /* If name = Companies and HR mode is on, change tab name to My Company. */
             if ($_SESSION['CATS']->isHrMode() && $tabText == 'Companies')
             {
-                $tabText = 'My Company';
+                $tabText = _('My Company');
             }
 
             /* Allow a hook to prevent a module from being displayed. */
@@ -636,7 +637,7 @@ class TemplateUtility
                 if ($alPosition === false)
                 {
                     echo '<li><a class="', $className, '" href="', $indexName,
-                         '?m=', $moduleName, '">', $tabText, '</a></li>', "\n";
+                         '?m=', $moduleName, '">', _($tabText), '</a></li>', "\n";
                 }
                 else
                 {
@@ -652,7 +653,7 @@ class TemplateUtility
                          $_SESSION['CATS']->isDemo())
                      {
                         echo '<li><a class="', $className, '" href="', $indexName, '?m=', $moduleName, '">',
-                             substr($tabText, 0, $alPosition), '</a></li>', "\n";
+                             mb_substr(_($tabText), 0, $alPosition), '</a></li>', "\n";
                     }
                 }
 
@@ -671,7 +672,7 @@ class TemplateUtility
             echo '<li>';
 
             echo '<a class="active" href="', $indexName, '?m=', $moduleName,
-                 '">', $tabText, '</a>', "\n";
+                 '">', _($tabText), '</a>', "\n";
 
             $subTabs = $active->getSubTabs($modules);
             if ($subTabs)
@@ -735,7 +736,7 @@ class TemplateUtility
                     {
                         /* Javascript subtab. */
                         echo '<li><a href="', substr($link, 0, $jsPosition), '" onclick="',
-                             substr($link, $jsPosition + 4), '" style="'.$style.'">', $subTabText, '</a></li>', "\n";
+                             substr($link, $jsPosition + 4), '" style="'.$style.'">', _($subTabText), '</a></li>', "\n";
                     }
 
                     /* A few subtabs have special logic to decide if they display or not. */
@@ -751,7 +752,7 @@ class TemplateUtility
                         $defaultCompanyID = $companies->getDefaultCompany();
                         if ($defaultCompanyID !== false)
                         {
-                            echo '<li><a href="', $link, '" style="'.$style.'">', $subTabText, '</a></li>', "\n";
+                            echo '<li><a href="', $link, '" style="'.$style.'">', _($subTabText), '</a></li>', "\n";
                         }
                     }
                     else if (strpos($link, 'a=administration') !== false)
@@ -759,7 +760,7 @@ class TemplateUtility
                         /* Administration subtab. */
                         if ($_SESSION['CATS']->getAccessLevel('settings.administration') >= ACCESS_LEVEL_DEMO)
                         {
-                            echo '<li><a href="', $link, '" style="'.$style.'">', $subTabText, '</a></li>', "\n";
+                            echo '<li><a href="', $link, '" style="'.$style.'">', _($subTabText), '</a></li>', "\n";
                         }
                     }
                     else if (strpos($link, 'a=customizeEEOReport') !== false)
@@ -770,7 +771,7 @@ class TemplateUtility
 
                         if ($EEOSettingsRS['enabled'] == 1)
                         {
-                            echo '<li><a href="', $link, '" style="'.$style.'">', $subTabText, '</a></li>', "\n";
+                            echo '<li><a href="', $link, '" style="'.$style.'">', _($subTabText), '</a></li>', "\n";
                         }
                     }
 
@@ -779,7 +780,7 @@ class TemplateUtility
                     else if ($link != '')
                     {
                         /* Normal subtab. */
-                        echo '<li><a href="', $link, '" style="'.$style.'">', $subTabText, '</a></li>', "\n";
+                        echo '<li><a href="', $link, '" style="'.$style.'">', _($subTabText), '</a></li>', "\n";
                     }
                 }
 
@@ -1179,7 +1180,7 @@ class TemplateUtility
         echo '"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">', "\n";
         echo '<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">', "\n";
         echo '<head>', "\n";
-        echo '<title>OpenCATS - ', $pageTitle, '</title>', "\n";
+        echo '<title>OpenCATS - ', _($pageTitle), '</title>', "\n";
         echo '<meta http-equiv="Content-Type" content="text/html; charset=', HTML_ENCODING, '" />', "\n";
         echo '<link rel="icon" href="images/favicon.ico" type="image/x-icon" />', "\n";
         echo '<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />', "\n";

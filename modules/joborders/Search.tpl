@@ -9,13 +9,13 @@
             <table>
                 <tr>
                     <td width="3%">
-                        <img src="images/job_orders.gif" width="24" height="24" border="0" alt="Job Orders" style="margin-top: 3px;" />&nbsp;
+                        <img src="images/job_orders.gif" width="24" height="24" border="0" alt="<?php echo _('Job Orders'); ?>" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Job Orders: Search Job Orders</h2></td>
+                    <td><h2><?php echo _('Job Orders'); ?>: <?php echo _('Search Job Orders'); ?></h2></td>
                 </tr>
             </table>
 
-            <p class="note">Search Job Orders</p>
+            <p class="note"><?php echo _('Search Job Orders'); ?></p>
 
             <table class="searchTable" id="searchTable">
                 <tr>
@@ -27,13 +27,13 @@
 
                             <?php TemplateUtility::printSavedSearch($this->savedSearchRS); ?>
 
-                            <label id="searchModeLabel" for="searchMode">Search By:</label>&nbsp;
+                            <label id="searchModeLabel" for="searchMode"><?php echo _('Search By:'); ?></label>&nbsp;
                             <select id="searchMode" name="mode" onclick="advancedSearchConsider();" class="selectBox">
-                                <option value="searchByJobTitle"<?php if ($this->mode == "searchByJobTitle"): ?> selected="selected"<?php endif; ?>>Job Title</option>
-                                <option value="searchByCompanyName"<?php if ($this->mode == "searchByCompanyName"): ?> selected="selected"<?php endif; ?>>Company Name</option>
+                                <option value="searchByJobTitle"<?php if ($this->mode == "searchByJobTitle"): ?> selected="selected"<?php endif; ?>><?php echo _('Job Title'); ?></option>
+                                <option value="searchByCompanyName"<?php if ($this->mode == "searchByCompanyName"): ?> selected="selected"<?php endif; ?>><?php echo _('Company Name'); ?></option>
                             </select>&nbsp;
                             <input type="text" class="inputbox" id="searchText" name="wildCardString" value="<?php if (!empty($this->wildCardString)) echo(urldecode($this->wildCardString)); ?>" style="width:250px" />&nbsp;*&nbsp;
-                            <input type="submit" class="button" id="searchJobOrders" name="searchJobOrders" value="Search" />
+                            <input type="submit" class="button" id="searchJobOrders" name="searchJobOrders" value="<?php echo _('Search'); ?>" />
                             <?php TemplateUtility::printAdvancedSearch('searchByKeySkills,searchByResume'); ?>
                         </form>
                     </td>

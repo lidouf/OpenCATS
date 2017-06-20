@@ -19,7 +19,7 @@
                     <td width="3%">
                         <img src="images/candidate.gif" width="24" height="24" alt="Candidates" style="border: none; margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Candidates: Home</h2></td>
+                    <td><h2><?php echo _('Candidates'); ?>: <?php echo _('Home'); ?></h2></td>
                     <td align="right">
                         <form name="candidatesViewSelectorForm" id="candidatesViewSelectorForm" action="<?php echo(CATSUtility::getIndexName()); ?>" method="get">
                             <input type="hidden" name="m" value="candidates" />
@@ -32,23 +32,23 @@
                                     </td>
                                     <td valign="top" align="right" nowrap="nowrap">
                                         <input type="checkbox" name="onlyMyCandidates" id="onlyMyCandidates" <?php if ($this->dataGrid->getFilterValue('OwnerID') ==  $this->userID): ?>checked<?php endif; ?> onclick="<?php echo $this->dataGrid->getJSAddRemoveFilterFromCheckbox('OwnerID', '==',  $this->userID); ?>" />
-                                        Only My Candidates&nbsp;
+                                        <?php echo _('Only My Candidates'); ?>&nbsp;
                                     </td>
                                     <td valign="top" align="right" nowrap="nowrap">
                                         <input type="checkbox" name="onlyHotCandidates" id="onlyHotCandidates" <?php if ($this->dataGrid->getFilterValue('IsHot') == '1'): ?>checked<?php endif; ?> onclick="<?php echo $this->dataGrid->getJSAddRemoveFilterFromCheckbox('IsHot', '==', '\'1\''); ?>" />
-                                        <label for="onlyHotCandidates">Only Hot Candidates</label>&nbsp;
+                                        <label for="onlyHotCandidates"><?php echo _('Only Hot Candidates'); ?></label>&nbsp;
                                     </td>
                                     <td valign="top" align="right" nowrap="nowrap">
-	                					<a href="javascript:void(0);" id="exportBoxLink<?= $md5InstanceName ?>" onclick="toggleHideShowControls('<?= $md5InstanceName ?>-tags'); return false;">Filter by tag</a>
+	                					<a href="javascript:void(0);" id="exportBoxLink<?= $md5InstanceName ?>" onclick="toggleHideShowControls('<?= $md5InstanceName ?>-tags'); return false;"><?php echo _('Filter by tag'); ?></a>
 	                					<div id="tagsContainer" style="position:relative">
 	                					<div class="ajaxSearchResults" id="ColumnBox<?= $md5InstanceName ?>-tags" align="left"  style="position:absolute;width:200px;right:0<?= isset($this->globalStyle)?$this->globalStyle:"" ?>">
-	                						<table width="100%"><tr><td style="font-weight:bold; color:#000000;">Tag list</td>
+	                						<table width="100%"><tr><td style="font-weight:bold; color:#000000;"><?php echo _('Tag list'); ?></td>
 	                						<td align="right">
-	                							<input type="button" onclick="applyTagFilter()" value="Save&amp;Close" />
-	                							<input type="button" onclick="document.getElementById('ColumnBox<?= $md5InstanceName?>').style.display='none';" value="Close" />
+	                							<input type="button" onclick="applyTagFilter()" value="<?php echo _('Save&Close'); ?>" />
+	                							<input type="button" onclick="document.getElementById('ColumnBox<?= $md5InstanceName?>').style.display='none';" value="<?php echo _('Close'); ?>" />
 	                						</td>
-	                						</tr></table>
-
+	                						</tr>
+                                            </table>
 
 	                                        <ul>
 	                                        <script type="text/javascript">
@@ -111,7 +111,7 @@
             <?php endif; ?>
 
             <p class="note">
-                <span style="float:left;">Candidates - Page <?php echo($this->dataGrid->getCurrentPageHTML()); ?> (<?php echo($this->dataGrid->getNumberOfRows()); ?> Items)</span>
+                <span style="float:left;"><?php echo _('Candidates'); ?> - <?php printf(_('Page %s'), $this->dataGrid->getCurrentPageHTML()); ?> (<?php printf(_('%s Items'), $this->dataGrid->getNumberOfRows()); ?>)</span>
                 <span style="float:right;">
                     <?php $this->dataGrid->drawRowsPerPageSelector(); ?>
                     <?php $this->dataGrid->drawShowFilterControl(); ?>

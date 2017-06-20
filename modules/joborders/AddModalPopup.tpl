@@ -3,13 +3,13 @@
     <table>
         <tr>
             <td width="3%">
-                <img src="images/job_orders.gif" width="24" height="24" border="0" alt="Job Orders" style="margin-top: 3px;" />&nbsp;
+                <img src="images/job_orders.gif" width="24" height="24" border="0" alt="<?php echo _('Job Orders'); ?>" style="margin-top: 3px;" />&nbsp;
             </td>
-            <td><h2>Job Orders: Add Job Order</h2></td>
+            <td><h2><?php echo _('Job Orders'); ?>: <?php echo _('Add Job Order'); ?></h2></td>
        </tr>
     </table>
 
-    <p class="noteUnsized">Add Job Order</p>
+    <p class="noteUnsized"><?php echo _('Add Job Order'); ?></p>
             
         <script type="text/javascript">
             var typeOfAdd="new";
@@ -17,10 +17,10 @@
             
         <table class="editTable" width="100%">
             <tr>
-                <td class="tdData"><input type="radio" name="typeOfAddElement" onclick="document.getElementById('copyFrom').disabled=true; typeOfAdd='new';" checked>&nbsp;Empty Job Order</td>
+                <td class="tdData"><input type="radio" name="typeOfAddElement" onclick="document.getElementById('copyFrom').disabled=true; typeOfAdd='new';" checked>&nbsp;<?php echo _('Empty Job Order'); ?></td>
             </tr>
             <tr>
-                <td class="tdData"><input type="radio" name="typeOfAddElement" onclick="document.getElementById('copyFrom').disabled=false; typeOfAdd='existing';">&nbsp;Copy Existing Job Order</td>
+                <td class="tdData"><input type="radio" name="typeOfAddElement" onclick="document.getElementById('copyFrom').disabled=false; typeOfAdd='existing';">&nbsp;<?php echo _('Copy Existing Job Order'); ?></td>
             </tr>
             <tr id="hideShowCopyExisting">
                 <td class="tdData">
@@ -32,7 +32,7 @@
                 </td>
             </tr>
         </table>
-        <input type="button" class="button"  value="Create Job Order" onclick="parentGoToURL('<?php echo(CATSUtility::getIndexName()); ?>?m=joborders&amp;a=add&amp;jobOrderID='+document.getElementById('copyFrom').value+'&amp;typeOfAdd='+typeOfAdd);"/>&nbsp;
-        <input type="button" class="button" name="close" value="Close" onclick="parentHidePopWin();" />
+        <input type="button" class="button"  value="<?php echo _('Create Job Order'); ?>" onclick="parentGoToURL('<?php echo(CATSUtility::getIndexName()); ?>?m=joborders&amp;a=add&amp;jobOrderID='+document.getElementById('copyFrom').value+'&amp;typeOfAdd='+typeOfAdd);"/>&nbsp;
+        <input type="button" class="button" name="close" value="<?php echo _('Close'); ?>" onclick="parentHidePopWin();" />
     </body>
 </html>

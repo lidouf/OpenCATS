@@ -19,14 +19,14 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                     <td width="3%">
                         <img src="images/candidate.gif" width="24" height="24" border="0" alt="Candidates" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Candidates: Candidate Details</h2></td>
+                    <td><h2><?php echo _('Candidates'); ?>: <?php echo _('Candidate Details'); ?></h2></td>
                </tr>
             </table>
 
-            <p class="note">Candidate Details</p>
+            <p class="note"><?php echo _('Candidate Details'); ?></p>
 
             <?php if ($this->data['isAdminHidden'] == 1): ?>
-                <p class="warning">This Candidate is hidden.  Only CATS Administrators can view it or search for it.  To make it visible by the site users, click <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=administrativeHideShow&amp;candidateID=<?php echo($this->candidateID); ?>&amp;state=0" style="font-weight:bold;">Here.</a></p>
+                <p class="warning"><?php printf(_('This Candidate is hidden. Only CATS Administrators can view it or search for it. To make it visible by the site users, click %s.'), '<a href="' . CATSUtility::getIndexName() . '?m=candidates&amp;a=administrativeHideShow&amp;candidateID=' . $this->candidateID . '&amp;state=0" style="font-weight:bold;">Here.</a>'); ?></p>
             <?php endif; ?>
 
             <table class="detailsOutside">
@@ -44,7 +44,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                     <?php endif; ?>
                         <table class="detailsInside" height="100%">
                             <tr>
-                                <td class="vertical">Name:</td>
+                                <td class="vertical"><?php echo _('Name'); ?>:</td>
                                 <td class="data">
                                     <span style="font-weight: bold;" class="<?php echo($this->data['titleClass']); ?>">
                                         <?php $this->_($this->data['firstName']); ?>
@@ -59,7 +59,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                             </tr>
 
                             <tr>
-                                <td class="vertical">E-Mail:</td>
+                                <td class="vertical"><?php echo _('E-Mail'); ?>:</td>
                                 <td class="data">
                                     <a href="mailto:<?php $this->_($this->data['email1']); ?>">
                                         <?php $this->_($this->data['email1']); ?>
@@ -67,7 +67,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                                 </td>
                             </tr>
                             <tr>
-                                <td class="vertical">2nd E-Mail:</td>
+                                <td class="vertical"><?php echo _('2nd E-Mail'); ?>:</td>
                                 <td class="data">
                                     <a href="mailto:<?php $this->_($this->data['email2']); ?>">
                                         <?php $this->_($this->data['email2']); ?>
@@ -76,27 +76,27 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                             </tr>
 
                             <tr>
-                                <td class="vertical">Home Phone:</td>
+                                <td class="vertical"><?php echo _('Home Phone'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['phoneHome']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Cell Phone:</td>
+                                <td class="vertical"><?php echo _('Cell Phone'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['phoneCell']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Work Phone:</td>
+                                <td class="vertical"><?php echo _('Work Phone'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['phoneWork']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Best Time To Call:</td>
+                                <td class="vertical"><?php echo _('Best Time To Call'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['bestTimeToCall']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Address:</td>
+                                <td class="vertical"><?php echo _('Address'); ?>:</td>
                                 <td class="data"><?php echo(nl2br(htmlspecialchars($this->data['address']))); ?></td>
                             </tr>
 
@@ -109,7 +109,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                             </tr>
 
                             <tr>
-                                <td class="vertical">Web Site:</td>
+                                <td class="vertical"><?php echo _('Web Site'); ?>:</td>
                                 <td class="data">
                                     <?php if (!empty($this->data['webSite'])): ?>
                                         <a href="<?php $this->_($this->data['webSite']); ?>" target="_blank"><?php $this->_($this->data['webSite']); ?></a>
@@ -118,7 +118,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                             </tr>
 
                             <tr>
-                                <td class="vertical">Source:</td>
+                                <td class="vertical"><?php echo _('Source'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['source']); ?></td>
                             </tr>
 
@@ -143,52 +143,52 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                     <?php endif; ?>
                         <table class="detailsInside" height="100%">
                             <tr>
-                                <td class="vertical">Date Available:</td>
+                                <td class="vertical"><?php echo _('Date Available'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['dateAvailable']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Current Employer:</td>
+                                <td class="vertical"><?php echo _('Current Employer'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['currentEmployer']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Key Skills:</td>
+                                <td class="vertical"><?php echo _('Key Skills'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['keySkills']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Can Relocate:</td>
+                                <td class="vertical"><?php echo _('Can Relocate'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['canRelocate']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Current Pay:</td>
+                                <td class="vertical"><?php echo _('Current Pay'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['currentPay']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Desired Pay:</td>
+                                <td class="vertical"><?php echo _('Desired Pay'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['desiredPay']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Pipeline:</td>
+                                <td class="vertical"><?php echo _('Pipeline'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['pipeline']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Submitted:</td>
+                                <td class="vertical"><?php echo _('Submitted'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['submitted']); ?></td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Created:</td>
+                                <td class="vertical"><?php echo _('Created'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['dateCreated']); ?> (<?php $this->_($this->data['enteredByFullName']); ?>)</td>
                             </tr>
 
                             <tr>
-                                <td class="vertical">Owner:</td>
+                                <td class="vertical"><?php echo _('Owner'); ?>:</td>
                                 <td class="data"><?php $this->_($this->data['ownerFullName']); ?></td>
                             </tr>
 
@@ -209,7 +209,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                                             <?php if (!$this->isPopup): ?>
                                                 <?php if ($this->getUserAccessLevel('candidates.deleteAttachment') >= ACCESS_LEVEL_DELETE): ?>
                                                     <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=deleteAttachment&amp;candidateID=<?php echo($this->candidateID); ?>&amp;attachmentID=<?php $this->_($attachmentsData['attachmentID']) ?>" onclick="javascript:return confirm('Delete this attachment?');">
-                                                        <img src="images/actions/delete.gif" alt="" width="16" height="16" border="0" title="Delete" />
+                                                        <img src="images/actions/delete.gif" alt="" width="16" height="16" border="0" title="<?php echo _('Delete'); ?>" />
                                                     </a>
                                                 <?php endif; ?>
                                             <?php else: ?>
@@ -276,7 +276,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                     <td>
                         <table class="detailsInside">
                             <tr>
-                                <td valign="top" class="vertical">Misc. Notes:</td>
+                                <td valign="top" class="vertical"><?php echo _('Misc. Notes'); ?>:</td>
                                 <?php if ($this->isShortNotes): ?>
                                     <td id="shortNotes" style="display:block;" class="data">
                                         <?php echo($this->data['shortNotes']); ?><span class="moreText">...</span>&nbsp;
@@ -294,7 +294,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                             </tr>
 
                             <tr>
-                                <td valign="top" class="vertical">Upcoming Events:</td>
+                                <td valign="top" class="vertical"><?php echo _('Upcoming Events'); ?>:</td>
                                 <td id="shortNotes" style="display:block;" class="data">
                                 <?php foreach ($this->calendarRS as $rowNumber => $calendarData): ?>
                                     <div>
@@ -307,7 +307,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                                 <?php endforeach; ?>
                                 <?php if ($this->getUserAccessLevel('pipelines.addActivityChangeStatus') >= ACCESS_LEVEL_EDIT): ?>
                                     <a href="#" onclick="showPopWin('<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=addActivityChangeStatus&amp;candidateID=<?php echo($this->candidateID); ?>&amp;jobOrderID=-1&amp;onlyScheduleEvent=true', 600, 350, null); return false;">
-                                        <img src="images/calendar_add.gif" width="16" height="16" border="0" alt="Schedule Event" class="absmiddle" />&nbsp;Schedule Event
+                                        <img src="images/calendar_add.gif" width="16" height="16" border="0" alt="<?php echo _('Schedule Event'); ?>" class="absmiddle" />&nbsp;<?php echo _('Schedule Event'); ?>
                                     </a>
                                 <?php endif; ?>
                                 </td>
@@ -315,13 +315,13 @@ use OpenCATS\UI\CandidateQuickActionMenu;
 
                             <?php if (isset($this->questionnaires) && !empty($this->questionnaires)): ?>
                             <tr>
-                                <td valign="top" class="vertical" valign="top" align="left">Questionnaires:</td>
+                                <td valign="top" class="vertical" valign="top" align="left"><?php echo _('Questionnaires'); ?>:</td>
                                 <td valign="top" class="data" valign="top" align="left">
                                     <table cellpadding="0" cellspacing="0" border="0">
                                     <tr>
-                                        <td style="border-bottom: 1px solid #c0c0c0; font-weight: bold; padding-right: 10px;">Title (Internal)</td>
-                                        <td style="border-bottom: 1px solid #c0c0c0; font-weight: bold; padding-right: 10px;">Completed</td>
-                                        <td style="border-bottom: 1px solid #c0c0c0; font-weight: bold; padding-right: 10px;">Description (Public)</td>
+                                        <td style="border-bottom: 1px solid #c0c0c0; font-weight: bold; padding-right: 10px;"><?php echo _('Title (Internal)'); ?></td>
+                                        <td style="border-bottom: 1px solid #c0c0c0; font-weight: bold; padding-right: 10px;"><?php echo _('Completed'); ?></td>
+                                        <td style="border-bottom: 1px solid #c0c0c0; font-weight: bold; padding-right: 10px;"><?php echo _('Description (Public)'); ?></td>
                                     </tr>
                                     <?php foreach ($this->questionnaires as $questionnaire): ?>
                                     <tr>
@@ -330,11 +330,11 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                                         <td style="padding-right: 10px;" nowrap="nowrap"><?php echo $questionnaire['questionnaireDescription']; ?></td>
                                         <td style="padding-right: 10px;" nowrap="nowrap">
                                             <a id="edit_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=show_questionnaire&amp;candidateID=<?php echo($this->candidateID); ?>&amp;questionnaireTitle=<?php echo urlencode($questionnaire['questionnaireTitle']); ?>&print=no">
-                                                <img src="images/actions/view.gif" width="16" height="16" class="absmiddle" alt="view" border="0" />&nbsp;View
+                                                <img src="images/actions/view.gif" width="16" height="16" class="absmiddle" alt="view" border="0" />&nbsp;<?php echo _('View'); ?>
                                             </a>
                                             &nbsp;
                                             <a id="edit_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=show_questionnaire&amp;candidateID=<?php echo($this->candidateID); ?>&amp;questionnaireTitle=<?php echo urlencode($questionnaire['questionnaireTitle']); ?>&print=yes">
-                                                <img src="images/actions/print.gif" width="16" height="16" class="absmiddle" alt="print" border="0" />&nbsp;Print
+                                                <img src="images/actions/print.gif" width="16" height="16" class="absmiddle" alt="print" border="0" />&nbsp;<?php echo _('Print'); ?>
                                             </a>
                                         </td>
                                     </tr>
@@ -345,7 +345,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                             <?php endif; ?>
 
                             <tr>
-                                <td valign="top" class="vertical">Attachments:</td>
+                                <td valign="top" class="vertical"><?php echo _('Attachments'); ?>:</td>
                                 <td valign="top" class="data">
                                     <table class="attachmentsTable">
                                         <?php foreach ($this->attachmentsRS as $rowNumber => $attachmentsData): ?>
@@ -364,7 +364,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                                                         <?php if (!$this->isPopup): ?>
                                                             <?php if ($this->getUserAccessLevel('candidates.deleteAttachment') >= ACCESS_LEVEL_DELETE): ?>
                                                                 <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=deleteAttachment&amp;candidateID=<?php echo($this->candidateID); ?>&amp;attachmentID=<?php $this->_($attachmentsData['attachmentID']) ?>" onclick="javascript:return confirm('Delete this attachment?');">
-                                                                    <img src="images/actions/delete.gif" alt="" width="16" height="16" border="0" title="Delete" />
+                                                                    <img src="images/actions/delete.gif" alt="" width="16" height="16" border="0" title="<?php echo _('Delete'); ?>" />
                                                                 </a>
                                                             <?php endif; ?>
                                                         <?php endif; ?>
@@ -380,18 +380,18 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                                             <?php else: ?>
                                                 <a href="#" onclick="showPopWin('<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=createAttachment&amp;candidateID=<?php echo($this->candidateID); ?>', 400, 125, null); return false;">
                                             <?php endif; ?>
-                                                <img src="images/paperclip_add.gif" width="16" height="16" border="0" alt="Add Attachment" class="absmiddle" />&nbsp;Add Attachment
+                                                <img src="images/paperclip_add.gif" width="16" height="16" border="0" alt="Add Attachment" class="absmiddle" />&nbsp;<?php echo _('Add Attachment'); ?>
                                             </a>
                                         <?php endif; ?>
                                     <?php endif; ?>
                                 </td>
                             </tr>
                             <tr>
-                                <td valign="top" class="vertical">Tags:
+                                <td valign="top" class="vertical"><?php echo _('Tags'); ?>:
                                     <?php if (!$this->isPopup){ ?>
                                         <?php if ($this->getUserAccessLevel('candidates.addCandidateTags') >= ACCESS_LEVEL_EDIT){ ?>
                                                 <a href="#" onclick="showPopWin('<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=addCandidateTags&amp;candidateID=<?php echo($this->candidateID); ?>', 400, 125, null); return false;">
-                                                Add/Remove
+                                                    <?php echo _('Add'); ?>/<?php echo _('Remove'); ?>
                                             </a>
                                         <?php } ?>
                                     <?php } ?>
@@ -407,30 +407,30 @@ use OpenCATS\UI\CandidateQuickActionMenu;
             <?php if (!$this->isPopup): ?>
             <?php if ($this->getUserAccessLevel('candidates.edit') >= ACCESS_LEVEL_EDIT): ?>
                 <a id="edit_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=edit&amp;candidateID=<?php echo($this->candidateID); ?>">
-                    <img src="images/actions/edit.gif" width="16" height="16" class="absmiddle" alt="edit" border="0" />&nbsp;Edit
+                    <img src="images/actions/edit.gif" width="16" height="16" class="absmiddle" alt="<?php echo _('Edit'); ?>" border="0" />&nbsp;<?php echo _('Edit'); ?>
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
             <?php endif; ?>
             <?php if ($this->getUserAccessLevel('candidates.delete') >= ACCESS_LEVEL_DELETE): ?>
-                <a id="delete_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=delete&amp;candidateID=<?php echo($this->candidateID); ?>" onclick="javascript:return confirm('Delete this candidate?');">
-                    <img src="images/actions/delete.gif" width="16" height="16" class="absmiddle" alt="delete" border="0" />&nbsp;Delete
+                <a id="delete_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=delete&amp;candidateID=<?php echo($this->candidateID); ?>" onclick="javascript:return confirm('<?php echo _('Delete this candidate?'); ?>');">
+                    <img src="images/actions/delete.gif" width="16" height="16" class="absmiddle" alt="<?php echo _('Delete'); ?>" border="0" />&nbsp;<?php echo _('Delete'); ?>
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
             <?php endif; ?>
             <?php if ($this->privledgedUser): ?>
                 <a id="history_link" href="<?php echo(CATSUtility::getIndexName()); ?>?m=settings&amp;a=viewItemHistory&amp;dataItemType=100&amp;dataItemID=<?php echo($this->candidateID); ?>">
-                    <img src="images/icon_clock.gif" width="16" height="16" class="absmiddle"  border="0" />&nbsp;View History
+                    <img src="images/icon_clock.gif" width="16" height="16" class="absmiddle"  border="0" />&nbsp;<?php echo _('View History'); ?>
                 </a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
             <?php endif; ?>
             <?php if ($this->getUserAccessLevel('candidates.administrativeHideShow') >= ACCESS_LEVEL_MULTI_SA): ?>
                 <?php if ($this->data['isAdminHidden'] == 1): ?>
                     <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=administrativeHideShow&amp;candidateID=<?php echo($this->candidateID); ?>&amp;state=0">
-                        <img src="images/resume_preview_inline.gif" width="16" height="16" class="absmiddle" alt="delete" border="0" />&nbsp;Administrative Show
+                        <img src="images/resume_preview_inline.gif" width="16" height="16" class="absmiddle" alt="<?php echo _('Delete'); ?>" border="0" />&nbsp;<?php echo _('Administrative Show'); ?>
                     </a>
                     <?php else: ?>
                     <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=administrativeHideShow&amp;candidateID=<?php echo($this->candidateID); ?>&amp;state=1">
-                        <img src="images/resume_preview_inline.gif" width="16" height="16" class="absmiddle" alt="delete" border="0" />&nbsp;Administrative Hide
+                        <img src="images/resume_preview_inline.gif" width="16" height="16" class="absmiddle" alt="<?php echo _('Delete'); ?>" border="0" />&nbsp;<?php echo _('Administrative Hide'); ?>
                     </a>
                 <?php endif; ?>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -439,19 +439,19 @@ use OpenCATS\UI\CandidateQuickActionMenu;
             <br clear="all" />
             <br />
 
-            <p class="note">Job Order Pipeline</p>
+            <p class="note"><?php echo _('Job Order Pipeline'); ?></p>
             <table class="sortablepair">
                 <tr>
                     <th></th>
-                    <th align="left">Match</th>
-                    <th align="left">Title</th>
-                    <th align="left">Company</th>
-                    <th align="left">Owner</th>
-                    <th align="left">Added</th>
-                    <th align="left">Entered By</th>
-                    <th align="left">Status</th>
+                    <th align="left"><?php echo _('Match'); ?></th>
+                    <th align="left"><?php echo _('Title'); ?></th>
+                    <th align="left"><?php echo _('Company'); ?></th>
+                    <th align="left"><?php echo _('Owner'); ?></th>
+                    <th align="left"><?php echo _('Added'); ?></th>
+                    <th align="left"><?php echo _('Entered By'); ?></th>
+                    <th align="left"><?php echo _('Status'); ?></th>
 <?php if (!$this->isPopup): ?>
-                    <th align="center">Action</th>
+                    <th align="center"><?php echo _('Action'); ?></th>
 <?php endif; ?>
                 </tr>
 
@@ -460,12 +460,12 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                         <td valign="top">
                             <span id="pipelineOpen<?php echo($rowNumber); ?>">
                                 <a href="javascript:void(0);" onclick="document.getElementById('pipelineDetails<?php echo($rowNumber); ?>').style.display=''; document.getElementById('pipelineClose<?php echo($rowNumber); ?>').style.display = ''; document.getElementById('pipelineOpen<?php echo($rowNumber); ?>').style.display = 'none'; PipelineDetails_populate(<?php echo($pipelinesData['candidateJobOrderID']); ?>, 'pipelineInner<?php echo($rowNumber); ?>', '<?php echo($this->sessionCookie); ?>');">
-                                    <img src="images/arrow_next.png" alt="" border="0" title="Show History" />
+                                    <img src="images/arrow_next.png" alt="" border="0" title="<?php echo _('Show History'); ?>" />
                                 </a>
                             </span>
                             <span id="pipelineClose<?php echo($rowNumber); ?>" style="display: none;">
                                 <a href="javascript:void(0);" onclick="document.getElementById('pipelineDetails<?php echo($rowNumber); ?>').style.display = 'none'; document.getElementById('pipelineClose<?php echo($rowNumber); ?>').style.display = 'none'; document.getElementById('pipelineOpen<?php echo($rowNumber); ?>').style.display = '';">
-                                    <img src="images/arrow_down.png" alt="" border="0" title="Hide History" />
+                                    <img src="images/arrow_down.png" alt="" border="0" title="<?php echo _('Hide History'); ?>" />
                                 </a>
                             </span>
                         </td>
@@ -500,12 +500,12 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                             <?php endif; ?>
                             <?php if ($this->getUserAccessLevel('pipelines.addActivityChangeStatus') >= ACCESS_LEVEL_EDIT): ?>
                                 <a href="#" onclick="showPopWin('<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=addActivityChangeStatus&amp;candidateID=<?php echo($this->candidateID); ?>&amp;jobOrderID=<?php echo($pipelinesData['jobOrderID']); ?>', 600, 480, null); return false;" >
-                                    <img src="images/actions/edit.gif" width="16" height="16" class="absmiddle" alt="" border="0" title="Log an Activity / Change Status"/>
+                                    <img src="images/actions/edit.gif" width="16" height="16" class="absmiddle" alt="" border="0" title="<?php echo _('Log an Activity'); ?> / <?php echo _('Change Status'); ?>"/>
                                 </a>
                             <?php endif; ?>
                             <?php if ($this->getUserAccessLevel('pipelines.removeFromPipeline') >= ACCESS_LEVEL_DELETE): ?>
                                 <a href="<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=removeFromPipeline&amp;candidateID=<?php echo($this->candidateID); ?>&amp;jobOrderID=<?php echo($pipelinesData['jobOrderID']); ?>"  onclick="javascript:return confirm('Delete from <?php $this->_(str_replace('\'', '\\\'', $pipelinesData['title'])); ?> (<?php $this->_(str_replace('\'', '\\\'', $pipelinesData['companyName'])); ?>) pipeline?')">
-                                    <img src="images/actions/delete.gif" width="16" height="16" class="absmiddle" alt="" border="0" title="Remove from Pipeline"/>
+                                    <img src="images/actions/delete.gif" width="16" height="16" class="absmiddle" alt="" border="0" title="<?php echo _('Remove from Pipeline'); ?>"/>
                                 </a>
                             <?php endif; ?>
                         </td>
@@ -517,7 +517,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
                                 <tr>
                                     <td align="left" style="padding: 6px 6px 6px 6px; background-color: white; clear: both;">
                                         <div style="overflow: auto; height: 200px;" id="pipelineInner<?php echo($rowNumber); ?>">
-                                            <img src="images/indicator.gif" alt="" />&nbsp;&nbsp;Loading pipeline details...
+                                            <img src="images/indicator.gif" alt="" />&nbsp;&nbsp;<?php echo _('Loading pipeline details...'); ?>
                                         </div>
                                     </td>
                                 </tr>
@@ -531,24 +531,24 @@ use OpenCATS\UI\CandidateQuickActionMenu;
 <?php if (!$this->isPopup): ?>
             <?php if ($this->getUserAccessLevel('candidates.considerForJobSearch') >= ACCESS_LEVEL_EDIT): ?>
                 <a href="#" onclick="showPopWin('<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=considerForJobSearch&amp;candidateID=<?php echo($this->candidateID); ?>', 750, 390, null); return false;">
-                    <img src="images/consider.gif" width="16" height="16" class="absmiddle" alt="Add to Pipeline" border="0" />&nbsp;Add This Candidate to Job Order Pipeline
+                    <img src="images/consider.gif" width="16" height="16" class="absmiddle" alt="<?php echo _('Add to Pipeline'); ?>" border="0" />&nbsp;<?php echo _('Add This Candidate to Job Order Pipeline'); ?>
                 </a>
             <?php endif; ?>
 <?php endif; ?>
             <br clear="all" />
             <br />
 
-            <p class="note">Activity</p>
+            <p class="note"><?php echo _('Activity'); ?></p>
 
             <table id="activityTable" class="sortable">
                 <tr>
-                    <th align="left" width="125">Date</th>
-                    <th align="left" width="90">Type</th>
-                    <th align="left" width="90">Entered</th>
-                    <th align="left" width="250">Regarding</th>
-                    <th align="left">Notes</th>
+                    <th align="left" width="125"><?php echo _('Date'); ?></th>
+                    <th align="left" width="90"><?php echo _('Type'); ?></th>
+                    <th align="left" width="90"><?php echo _('Entered'); ?></th>
+                    <th align="left" width="250"><?php echo _('Regarding'); ?></th>
+                    <th align="left"><?php echo _('Notes'); ?></th>
 <?php if (!$this->isPopup): ?>
-                    <th align="left" width="40">Action</th>
+                    <th align="left" width="40"><?php echo _('Action'); ?></th>
 <?php endif; ?>
                 </tr>
 
@@ -580,7 +580,7 @@ use OpenCATS\UI\CandidateQuickActionMenu;
             <div id="addActivityDiv">
                 <?php if ($this->getUserAccessLevel('pipelines.addActivityChangeStatus') >= ACCESS_LEVEL_EDIT): ?>
                     <a href="#" id="addActivityLink" onclick="showPopWin('<?php echo(CATSUtility::getIndexName()); ?>?m=candidates&amp;a=addActivityChangeStatus&amp;candidateID=<?php echo($this->candidateID); ?>&amp;jobOrderID=-1', 600, 480, null); return false;">
-                        <img src="images/new_activity_inline.gif" width="16" height="16" class="absmiddle" title="Log an Activity / Change Status" alt="Log an Activity / Change Status" border="0" />&nbsp;Log an Activity
+                        <img src="images/new_activity_inline.gif" width="16" height="16" class="absmiddle" title="Log an Activity / Change Status" alt="Log an Activity / Change Status" border="0" />&nbsp;<?php echo _('Log an Activity'); ?>
                     </a>
                 <?php endif; ?>
                 <img src="images/indicator2.gif" id="addActivityIndicator" alt="" style="visibility: hidden; margin-left: 5px;" height="16" width="16" />

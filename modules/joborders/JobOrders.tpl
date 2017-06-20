@@ -16,7 +16,7 @@
                     <td width="3%">
                         <img src="images/job_orders.gif" width="24" height="24" border="0" alt="Job Orders" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Job Orders: Home</h2></td>
+                    <td><h2><?php echo _('Job Orders'); ?>: <?php echo _('Home'); ?></h2></td>
 
                     <?php TemplateUtility::printPopupContainer(); ?>
 
@@ -29,23 +29,23 @@
                                 <tr>
                                     <td>
                                         <select name="view" id="view" onchange="<?php echo($this->dataGrid->getJSAddFilter('Status', '==', 'this.value', 'true')); ?>" class="selectBox">
-                                            <option value="Active / OnHold / Full"<?php if ($this->dataGrid->getFilterValue('Status') == 'Active / OnHold / Full'): ?> selected="selected"<?php endif; ?>>Active / On Hold / Full</option>
-                                            <option value="Active"<?php if ($this->dataGrid->getFilterValue('Status') == 'Active'): ?> selected="selected"<?php endif; ?>>Active</option>
-                                            <option value="OnHold / Full"<?php if ($this->dataGrid->getFilterValue('Status') == 'OnHold / Full'): ?> selected="selected"<?php endif; ?>>On Hold / Full</option>
-                                            <option value="Closed / Canceled"<?php if ($this->dataGrid->getFilterValue('Status') == 'Closed / Canceled'): ?> selected="selected"<?php endif; ?>>Closed / Canceled</option>
-                                            <option value="Upcoming / Lead"<?php if ($this->dataGrid->getFilterValue('Status') == 'Upcoming / Lead'): ?> selected="selected"<?php endif; ?>>Upcoming / Lead</option>
-                                            <option value=""<?php if ($this->dataGrid->getFilterValue('Status') == ''): ?> selected="selected"<?php endif; ?>>All</option>
+                                            <option value="Active / OnHold / Full"<?php if ($this->dataGrid->getFilterValue('Status') == 'Active / OnHold / Full'): ?> selected="selected"<?php endif; ?>><?php echo _('Active / On Hold / Full'); ?></option>
+                                            <option value="Active"<?php if ($this->dataGrid->getFilterValue('Status') == 'Active'): ?> selected="selected"<?php endif; ?>><?php echo _('Active'); ?></option>
+                                            <option value="OnHold / Full"<?php if ($this->dataGrid->getFilterValue('Status') == 'OnHold / Full'): ?> selected="selected"<?php endif; ?>><?php echo _('On Hold / Full'); ?></option>
+                                            <option value="Closed / Canceled"<?php if ($this->dataGrid->getFilterValue('Status') == 'Closed / Canceled'): ?> selected="selected"<?php endif; ?>><?php echo _('Closed / Canceled'); ?></option>
+                                            <option value="Upcoming / Lead"<?php if ($this->dataGrid->getFilterValue('Status') == 'Upcoming / Lead'): ?> selected="selected"<?php endif; ?>><?php echo _('Upcoming / Lead'); ?></option>
+                                            <option value=""<?php if ($this->dataGrid->getFilterValue('Status') == ''): ?> selected="selected"<?php endif; ?>><?php echo _('All'); ?></option>
                                         </select>
                                     </td>
 
                                     <td valign="top" align="right" nowrap="nowrap">
                                         <input type="checkbox" name="onlyMyJobOrders" id="onlyMyJobOrders" <?php if ($this->dataGrid->getFilterValue('OwnerID') ==  $this->userID): ?>checked<?php endif; ?> onclick="<?php echo $this->dataGrid->getJSAddRemoveFilterFromCheckbox('OwnerID', '==',  $this->userID); ?>" />
-                                        <label for="onlyMyJobOrders">Only My Job Orders</label>&nbsp;
+                                        <label for="onlyMyJobOrders"><?php echo _('Only My Job Orders'); ?></label>&nbsp;
 
                                     </td>
                                     <td valign="top" align="right" nowrap="nowrap">
                                         <input type="checkbox" name="onlyHotJobOrders" id="onlyHotJobOrders" <?php if ($this->dataGrid->getFilterValue('IsHot') == '1'): ?>checked<?php endif; ?> onclick="<?php echo $this->dataGrid->getJSAddRemoveFilterFromCheckbox('IsHot', '==', '\'1\''); ?>" />
-                                        <label for="onlyHotJobOrders">Only Hot Job Orders</label>&nbsp;
+                                        <label for="onlyHotJobOrders"><?php echo _('Only Hot Job Orders'); ?></label>&nbsp;
                                     </td>
                                 </tr>
                             </table>

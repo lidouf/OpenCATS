@@ -714,7 +714,7 @@ class DataGrid
                     'rowsPerPageSelector.style.top = (docjslib_getRealTop(this) + 17) + \'px\'; '.
                   '} else '.
                     'rowsPerPageSelector.style.display=\'none\'; '.
-             '">Rows Per Page</a>';
+             '">' . _('Rows Per Page') . '</a>';
 
         echo '<span style="position: absolute; text-align:left; display:none;" id="rowsPerPageSelectorFrame', md5($this->_instanceName), '">';
         $this->_getData();
@@ -742,14 +742,14 @@ class DataGrid
             if ($this->_parameters['maxResults'] == $maxResults)
             {
                 echo sprintf(
-                    '<option selected="selected" value="%s">%s entries per page</option>',
+                    '<option selected="selected" value="%s">' . _('%s entries per page') . '</option>',
                     $maxResults, $maxResults
                 );
             }
             else
             {
                 echo sprintf(
-                    '<option value="%s">%s entries per page</option>',
+                    '<option value="%s">' . _('%s entries per page') . '</option>',
                     $maxResults, $maxResults
                 );
 
@@ -768,7 +768,7 @@ class DataGrid
      */
     public function drawShowFilterControl()
     {
-        echo '<a href="javascript:void(0);" class="button" style="text-decoration: none;" onclick="var filterArea = document.getElementById(\'filterResultsArea', md5($this->_instanceName), '\'); if(filterArea.style.display==\'none\') {filterArea.style.display=\'\'; if (newFilterCounter', md5($this->_instanceName),' == 0){ showNewFilter', md5($this->_instanceName), '();}}else filterArea.style.display=\'none\';">Filter</a>';
+        echo '<a href="javascript:void(0);" class="button" style="text-decoration: none;" onclick="var filterArea = document.getElementById(\'filterResultsArea', md5($this->_instanceName), '\'); if(filterArea.style.display==\'none\') {filterArea.style.display=\'\'; if (newFilterCounter', md5($this->_instanceName),' == 0){ showNewFilter', md5($this->_instanceName), '();}}else filterArea.style.display=\'none\';">' . _('Filter') . '</a>';
     }
 
     /**

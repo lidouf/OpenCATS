@@ -1,0 +1,672 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenCATS\n"
+"POT-Creation-Date: 2017-06-20 17:33+0800\n"
+"PO-Revision-Date: 2017-06-20 17:48+0800\n"
+"Last-Translator: lidouf <lidouf@gmail.com>\n"
+"Language-Team: lidouf@gmail.com\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: modules\n"
+"X-Poedit-SearchPath-1: lib/TemplateUtility.php\n"
+"X-Poedit-SearchPath-2: lib/Calendar.php\n"
+"X-Poedit-SearchPath-3: lib/DataGrid.php\n"
+
+#: lib/Calendar.php:646 lib/Calendar.php:652
+msgid "My Upcoming Events"
+msgstr "事件安排"
+
+#: lib/Calendar.php:646
+msgid "Calls"
+msgstr "电话"
+
+#: lib/Calendar.php:658
+msgid "My Upcoming Calls"
+msgstr "电话安排"
+
+#: lib/DataGrid.php:717
+msgid "Rows Per Page"
+msgstr "每页显示记录数"
+
+#: lib/DataGrid.php:745 lib/DataGrid.php:752
+#, php-format
+msgid "%s entries per page"
+msgstr "每页显示%s条"
+
+#: lib/DataGrid.php:771
+msgid "Filter"
+msgstr "筛选"
+
+#: lib/TemplateUtility.php:268
+msgid "Recent:"
+msgstr "最近记录："
+
+#: lib/TemplateUtility.php:287
+msgid "ASP Search:"
+msgstr "ASP搜索："
+
+#: lib/TemplateUtility.php:293
+msgid "Quick Search:"
+msgstr "快速搜索："
+
+#: lib/TemplateUtility.php:611
+msgid "My Company"
+msgstr "我的公司"
+
+#: modules/candidates/Add.tpl:19 modules/candidates/Candidates.tpl:22
+#: modules/candidates/Candidates.tpl:114 modules/candidates/Show.tpl:22
+msgid "Candidates"
+msgstr "候选人"
+
+#: modules/candidates/Add.tpl:19 modules/candidates/Add.tpl:496
+msgid "Add Candidate"
+msgstr "添加候选人"
+
+#: modules/candidates/Add.tpl:72
+msgid "First Name"
+msgstr "姓名"
+
+#: modules/candidates/Add.tpl:142
+msgid "Middle Name"
+msgstr "中名"
+
+#: modules/candidates/Add.tpl:151
+msgid "Last Name"
+msgstr "姓氏首字母"
+
+#: modules/candidates/Add.tpl:160 modules/candidates/Show.tpl:62
+msgid "E-Mail"
+msgstr "电子邮件"
+
+#: modules/candidates/Add.tpl:169 modules/candidates/Show.tpl:70
+msgid "2nd E-Mail"
+msgstr "次要邮件"
+
+#: modules/candidates/Add.tpl:178 modules/candidates/Show.tpl:112
+msgid "Web Site"
+msgstr "主页"
+
+#: modules/candidates/Add.tpl:187 modules/candidates/Show.tpl:79
+msgid "Home Phone"
+msgstr "家庭电话"
+
+#: modules/candidates/Add.tpl:206 modules/candidates/Show.tpl:84
+msgid "Cell Phone"
+msgstr "移动电话"
+
+#: modules/candidates/Add.tpl:215 modules/candidates/Show.tpl:89
+msgid "Work Phone"
+msgstr "工作电话"
+
+#: modules/candidates/Add.tpl:224 modules/candidates/Show.tpl:99
+msgid "Address"
+msgstr "地址"
+
+#: modules/candidates/Add.tpl:227
+msgid "\n"
+msgstr ""
+
+#: modules/candidates/Add.tpl:234 modules/joborders/Add.tpl:141
+msgid "City"
+msgstr "城市"
+
+#: modules/candidates/Add.tpl:243 modules/joborders/Add.tpl:161
+msgid "State"
+msgstr "省份"
+
+#: modules/candidates/Add.tpl:252
+msgid "Postal Code"
+msgstr "邮政编码"
+
+#: modules/candidates/Add.tpl:263
+msgid "Best Time to Call"
+msgstr "电话通知时间"
+
+#: modules/candidates/Add.tpl:274 modules/candidates/Add.tpl:278
+msgid "Resume"
+msgstr "简历"
+
+#: modules/candidates/Add.tpl:308 modules/candidates/Add.tpl:312
+msgid "Cut and paste resume text here."
+msgstr "粘贴简历文本到这里面。"
+
+#: modules/candidates/Add.tpl:322
+msgid "EEO Information"
+msgstr "EEO信息"
+
+#: modules/candidates/Add.tpl:327
+msgid "Gender"
+msgstr "性别"
+
+#: modules/candidates/Add.tpl:341
+msgid "Ethnic Background"
+msgstr "民族"
+
+#: modules/candidates/Add.tpl:358
+msgid "Veteran Status"
+msgstr "熟练状态"
+
+#: modules/candidates/Add.tpl:374
+msgid "Disability Status"
+msgstr "身体状况"
+
+#: modules/candidates/Add.tpl:389
+msgid "Other"
+msgstr "其它"
+
+#: modules/candidates/Add.tpl:407 modules/candidates/Show.tpl:161
+msgid "Can Relocate"
+msgstr "是否允许调配"
+
+#: modules/candidates/Add.tpl:416 modules/candidates/Show.tpl:146
+msgid "Date Available"
+msgstr "入职日期"
+
+#: modules/candidates/Add.tpl:428 modules/candidates/Show.tpl:151
+msgid "Current Employer"
+msgstr "当前雇主"
+
+#: modules/candidates/Add.tpl:437 modules/candidates/Show.tpl:166
+msgid "Current Pay"
+msgstr "当前薪资"
+
+#: modules/candidates/Add.tpl:446 modules/candidates/Show.tpl:171
+msgid "Desired Pay"
+msgstr "期望薪资"
+
+#: modules/candidates/Add.tpl:455 modules/candidates/Show.tpl:121
+msgid "Source"
+msgstr "来源"
+
+#: modules/candidates/Add.tpl:479 modules/candidates/Show.tpl:156
+msgid "Key Skills"
+msgstr "主要技能"
+
+#: modules/candidates/Add.tpl:488 modules/candidates/Show.tpl:279
+msgid "Misc. Notes"
+msgstr "杂项备注"
+
+#: modules/candidates/Add.tpl:497 modules/joborders/Add.tpl:304
+msgid "Reset"
+msgstr "重置"
+
+#: modules/candidates/Add.tpl:499
+msgid "Back to Search"
+msgstr "返回搜索"
+
+#: modules/candidates/Add.tpl:501
+msgid "Back to Candidates"
+msgstr "返回候选人列表"
+
+#: modules/candidates/Candidates.tpl:22 modules/joborders/JobOrders.tpl:19
+msgid "Home"
+msgstr "首页"
+
+#: modules/candidates/Candidates.tpl:35
+msgid "Only My Candidates"
+msgstr "仅显示我的候选人"
+
+#: modules/candidates/Candidates.tpl:39
+msgid "Only Hot Candidates"
+msgstr "仅显示重要候选人"
+
+#: modules/candidates/Candidates.tpl:42
+msgid "Filter by tag"
+msgstr "按标签筛选"
+
+#: modules/candidates/Candidates.tpl:45
+msgid "Tag list"
+msgstr "标签列表"
+
+#: modules/candidates/Candidates.tpl:47
+msgid "Save&Close"
+msgstr "保存并关闭"
+
+#: modules/candidates/Candidates.tpl:48 modules/joborders/AddModalPopup.tpl:36
+msgid "Close"
+msgstr "关闭"
+
+#: modules/candidates/Candidates.tpl:114 modules/home/Home.tpl:74
+#, php-format
+msgid "Page %s"
+msgstr "第%s页"
+
+#: modules/candidates/Candidates.tpl:114 modules/home/Home.tpl:74
+#, php-format
+msgid "%s Items"
+msgstr "共%s项"
+
+#: modules/candidates/ResumeView.tpl:7 modules/contacts/Add.tpl:92
+#: modules/contacts/Edit.tpl:107
+msgid " "
+msgstr ""
+
+#: modules/candidates/Show.tpl:22 modules/candidates/Show.tpl:26
+msgid "Candidate Details"
+msgstr "候选人详情"
+
+#: modules/candidates/Show.tpl:29
+#, php-format
+msgid ""
+"This Candidate is hidden. Only CATS Administrators can view it or search for "
+"it. To make it visible by the site users, click %s."
+msgstr ""
+"该候选人已隐藏。只有管理员能够查看或搜索他。要使其他用户可见，请点击%s。"
+
+#: modules/candidates/Show.tpl:47 modules/home/Home.tpl:34
+msgid "Name"
+msgstr "姓名"
+
+#: modules/candidates/Show.tpl:94
+msgid "Best Time To Call"
+msgstr "可接电话通知时间"
+
+#: modules/candidates/Show.tpl:176
+msgid "Pipeline"
+msgstr "管线"
+
+#: modules/candidates/Show.tpl:181
+msgid "Submitted"
+msgstr "提交次数"
+
+#: modules/candidates/Show.tpl:186
+msgid "Created"
+msgstr "创建"
+
+#: modules/candidates/Show.tpl:191 modules/candidates/Show.tpl:449
+#: modules/joborders/Add.tpl:207
+msgid "Owner"
+msgstr "职位提供者"
+
+#: modules/candidates/Show.tpl:212 modules/candidates/Show.tpl:367
+#: modules/candidates/Show.tpl:416 modules/candidates/Show.tpl:429
+#: modules/candidates/Show.tpl:433
+msgid "Delete"
+msgstr "删除"
+
+#: modules/candidates/Show.tpl:297
+msgid "Upcoming Events"
+msgstr "即将事件"
+
+#: modules/candidates/Show.tpl:310
+msgid "Schedule Event"
+msgstr "计划事件"
+
+#: modules/candidates/Show.tpl:318
+msgid "Questionnaires"
+msgstr "问卷调查"
+
+#: modules/candidates/Show.tpl:322
+msgid "Title (Internal)"
+msgstr "职位(内部)"
+
+#: modules/candidates/Show.tpl:323
+msgid "Completed"
+msgstr "完成度"
+
+#: modules/candidates/Show.tpl:324
+msgid "Description (Public)"
+msgstr "描述(公开)"
+
+#: modules/candidates/Show.tpl:333
+msgid "View"
+msgstr "查看"
+
+#: modules/candidates/Show.tpl:337
+msgid "Print"
+msgstr "打印"
+
+#: modules/candidates/Show.tpl:348
+msgid "Attachments"
+msgstr "附件"
+
+#: modules/candidates/Show.tpl:383
+msgid "Add Attachment"
+msgstr "添加附件"
+
+#: modules/candidates/Show.tpl:390
+msgid "Tags"
+msgstr "标签"
+
+#: modules/candidates/Show.tpl:394
+msgid "Add"
+msgstr "添加"
+
+#: modules/candidates/Show.tpl:394
+msgid "Remove"
+msgstr "移除"
+
+#: modules/candidates/Show.tpl:410
+msgid "Edit"
+msgstr "编辑"
+
+#: modules/candidates/Show.tpl:415
+msgid "Delete this candidate?"
+msgstr "删除本候选人？"
+
+#: modules/candidates/Show.tpl:422
+msgid "View History"
+msgstr "查看历史"
+
+#: modules/candidates/Show.tpl:429
+msgid "Administrative Show"
+msgstr "管理显示"
+
+#: modules/candidates/Show.tpl:433
+msgid "Administrative Hide"
+msgstr "管理隐藏"
+
+#: modules/candidates/Show.tpl:442
+msgid "Job Order Pipeline"
+msgstr "职位管线"
+
+#: modules/candidates/Show.tpl:446
+msgid "Match"
+msgstr "匹配度"
+
+#: modules/candidates/Show.tpl:447 modules/joborders/Add.tpl:35
+msgid "Title"
+msgstr "名称"
+
+#: modules/candidates/Show.tpl:448 modules/home/Home.tpl:35
+#: modules/joborders/Add.tpl:51
+msgid "Company"
+msgstr "公司"
+
+#: modules/candidates/Show.tpl:450
+msgid "Added"
+msgstr "添加时间"
+
+#: modules/candidates/Show.tpl:451
+msgid "Entered By"
+msgstr "录入人"
+
+#: modules/candidates/Show.tpl:452
+msgid "Status"
+msgstr "状态"
+
+#: modules/candidates/Show.tpl:454 modules/candidates/Show.tpl:551
+msgid "Action"
+msgstr "操作"
+
+#: modules/candidates/Show.tpl:463
+msgid "Show History"
+msgstr "显示历史"
+
+#: modules/candidates/Show.tpl:468
+msgid "Hide History"
+msgstr "隐藏历史"
+
+#: modules/candidates/Show.tpl:503 modules/candidates/Show.tpl:583
+msgid "Log an Activity"
+msgstr "添加活动日志"
+
+#: modules/candidates/Show.tpl:503
+msgid "Change Status"
+msgstr "更改状态"
+
+#: modules/candidates/Show.tpl:508
+msgid "Remove from Pipeline"
+msgstr "从管线移除"
+
+#: modules/candidates/Show.tpl:520
+msgid "Loading pipeline details..."
+msgstr "读取管线详情。。。"
+
+#: modules/candidates/Show.tpl:534
+msgid "Add to Pipeline"
+msgstr "添加到管线"
+
+#: modules/candidates/Show.tpl:534
+msgid "Add This Candidate to Job Order Pipeline"
+msgstr "将该候选人添加到职位管线"
+
+#: modules/candidates/Show.tpl:541
+msgid "Activity"
+msgstr "活动"
+
+#: modules/candidates/Show.tpl:545 modules/home/Home.tpl:37
+msgid "Date"
+msgstr "日期"
+
+#: modules/candidates/Show.tpl:546 modules/joborders/Add.tpl:122
+msgid "Type"
+msgstr "类型"
+
+#: modules/candidates/Show.tpl:547
+msgid "Entered"
+msgstr "录入"
+
+#: modules/candidates/Show.tpl:548
+msgid "Regarding"
+msgstr "关联"
+
+#: modules/candidates/Show.tpl:549
+msgid "Notes"
+msgstr "备注"
+
+#: modules/candidates/dataGrids.php:56 modules/joborders/dataGrids.php:87
+msgid "Add To List"
+msgstr "添加到列表"
+
+#: modules/candidates/dataGrids.php:60 modules/candidates/dataGrids.php:122
+msgid "Add To Pipeline"
+msgstr "添加到管线"
+
+#: modules/candidates/dataGrids.php:65 modules/candidates/dataGrids.php:125
+msgid "Send E-Mail"
+msgstr "发送邮件"
+
+#: modules/candidates/dataGrids.php:67 modules/candidates/dataGrids.php:127
+#: modules/joborders/dataGrids.php:88 modules/joborders/dataGrids.php:147
+msgid "Export"
+msgstr "导出"
+
+#: modules/candidates/dataGrids.php:121 modules/joborders/dataGrids.php:146
+msgid "Remove From This List"
+msgstr "从列表移除"
+
+#: modules/home/Home.tpl:13
+msgid "My Recent Calls"
+msgstr "最近的电话通知"
+
+#: modules/home/Home.tpl:30
+msgid "Recent Hires"
+msgstr "最近的成功招聘"
+
+#: modules/home/Home.tpl:36 modules/joborders/Add.tpl:181
+msgid "Recruiter"
+msgstr "招聘人"
+
+#: modules/home/Home.tpl:57 modules/home/Home.tpl:66
+msgid "Hiring Overview"
+msgstr "招聘总览"
+
+#: modules/home/Home.tpl:74
+msgid "Important Candidates"
+msgstr "重要候选人"
+
+#: modules/home/Home.tpl:74
+msgid "Submitted, Interviewing, Offered in Active Job Orders"
+msgstr "职位中的提交录用，面试和已发出OFFER的候选人"
+
+#: modules/joborders/Add.tpl:14 modules/joborders/AddModalPopup.tpl:6
+#: modules/joborders/AddModalPopup.tpl:8 modules/joborders/JobOrders.tpl:19
+#: modules/joborders/Search.tpl:12 modules/joborders/Search.tpl:14
+msgid "Job Orders"
+msgstr "职位"
+
+#: modules/joborders/Add.tpl:14 modules/joborders/Add.tpl:303
+#: modules/joborders/AddModalPopup.tpl:8 modules/joborders/AddModalPopup.tpl:12
+msgid "Add Job Order"
+msgstr "添加职位"
+
+#: modules/joborders/Add.tpl:18
+msgid "Add a new job order to the system."
+msgstr "添加新的招聘职位到系统。"
+
+#: modules/joborders/Add.tpl:24
+msgid "You have not added any companies yet."
+msgstr "你还没有添加任何公司。"
+
+#: modules/joborders/Add.tpl:24
+msgid "Companies"
+msgstr "公司"
+
+#: modules/joborders/Add.tpl:24
+#, php-format
+msgid ""
+"You can't add a job order until you add at least one company. Please go to "
+"the %s module and add a company."
+msgstr "必须先添加公司才能添加职位。请先到 %s 添加公司。"
+
+#: modules/joborders/Add.tpl:42
+msgid "Start Date"
+msgstr "开始日期"
+
+#: modules/joborders/Add.tpl:75
+msgid "Duration"
+msgstr "持续时间"
+
+#: modules/joborders/Add.tpl:84
+msgid "Department"
+msgstr "部门"
+
+#: modules/joborders/Add.tpl:88 modules/joborders/Add.tpl:110
+#: modules/joborders/Add.tpl:290
+msgid "None"
+msgstr "空白"
+
+#: modules/joborders/Add.tpl:97
+msgid "Maximum Rate"
+msgstr ""
+
+#: modules/joborders/Add.tpl:106
+msgid "Contact"
+msgstr "联系人"
+
+#: modules/joborders/Add.tpl:152
+msgid "Salary"
+msgstr "薪资"
+
+#: modules/joborders/Add.tpl:172
+msgid "Openings"
+msgstr "招聘人数"
+
+#: modules/joborders/Add.tpl:185 modules/joborders/Add.tpl:211
+msgid "Select a User"
+msgstr "选择用户"
+
+#: modules/joborders/Add.tpl:198
+msgid "Company Job ID"
+msgstr "公司内部职位编号"
+
+#: modules/joborders/Add.tpl:224
+msgid "Hot"
+msgstr "是否热门"
+
+#: modules/joborders/Add.tpl:228
+msgid ""
+"Checking this box indicates that the job order is 'hot', and shows up "
+"highlighted throughout the system."
+msgstr "选中该选项标志着该职位为'热门职位'，在整个系统中会加亮显示。"
+
+#: modules/joborders/Add.tpl:241
+msgid "Public"
+msgstr "是否公开"
+
+#: modules/joborders/Add.tpl:245
+msgid ""
+"Checking this box indicates that the job order is public. Job orders flaged "
+"as public will be able to be viewed by anonymous users."
+msgstr "选中该选项标志着该职位公开，标记为公开的职位匿名用户可以查看。"
+
+#: modules/joborders/Add.tpl:267
+msgid "Description"
+msgstr "描述"
+
+#: modules/joborders/Add.tpl:276
+msgid "Internal Notes"
+msgstr "内部备注"
+
+#: modules/joborders/Add.tpl:305
+msgid "Back to Job Orders"
+msgstr "返回职位列表"
+
+#: modules/joborders/AddModalPopup.tpl:20
+msgid "Empty Job Order"
+msgstr "全新创建职位"
+
+#: modules/joborders/AddModalPopup.tpl:23
+msgid "Copy Existing Job Order"
+msgstr "拷贝现有职位"
+
+#: modules/joborders/AddModalPopup.tpl:29
+msgid " ("
+msgstr ""
+
+#: modules/joborders/AddModalPopup.tpl:35
+msgid "Create Job Order"
+msgstr "创建职位"
+
+#: modules/joborders/JobOrders.tpl:32
+msgid "Active / On Hold / Full"
+msgstr ""
+
+#: modules/joborders/JobOrders.tpl:33
+msgid "Active"
+msgstr "有效的"
+
+#: modules/joborders/JobOrders.tpl:34
+msgid "On Hold / Full"
+msgstr ""
+
+#: modules/joborders/JobOrders.tpl:35
+msgid "Closed / Canceled"
+msgstr "已关闭 / 已取消"
+
+#: modules/joborders/JobOrders.tpl:36
+msgid "Upcoming / Lead"
+msgstr ""
+
+#: modules/joborders/JobOrders.tpl:37
+msgid "All"
+msgstr "所有"
+
+#: modules/joborders/JobOrders.tpl:43
+msgid "Only My Job Orders"
+msgstr "仅显示我的职位"
+
+#: modules/joborders/JobOrders.tpl:48
+msgid "Only Hot Job Orders"
+msgstr "仅显示热门职位"
+
+#: modules/joborders/Search.tpl:14 modules/joborders/Search.tpl:18
+msgid "Search Job Orders"
+msgstr "搜索职位"
+
+#: modules/joborders/Search.tpl:30
+msgid "Search By:"
+msgstr "按..搜索："
+
+#: modules/joborders/Search.tpl:32
+msgid "Job Title"
+msgstr "职位名称"
+
+#: modules/joborders/Search.tpl:33
+msgid "Company Name"
+msgstr "公司名称"
+
+#: modules/joborders/Search.tpl:36
+msgid "Search"
+msgstr "搜索"
+
+#: modules/settings/ItemHistory.tpl:62 modules/settings/ItemHistory.tpl:160
+msgid ": "
+msgstr ""

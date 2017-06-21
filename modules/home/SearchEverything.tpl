@@ -10,25 +10,25 @@
                     <td width="3%">
                         <img src="images/search.gif" width="24" height="24" border="0" alt="Quick Search" style="margin-top: 3px;" />&nbsp;
                     </td>
-                    <td><h2>Quick Search</h2></td>
+                    <td><h2><?php echo _('Quick Search'); ?></h2></td>
                 </tr>
             </table>
             <br />
 
             <!-- JO -->
-            <p class="note">Job Orders Results</p>
+            <p class="note"><?php echo _('Job Orders Results'); ?></p>
             <?php if (!empty($this->jobOrdersRS)): ?>
                 <table class="sortable" width="100%">
                     <tr>
-                        <th align="left">Title</th>
-                        <th align="left">Company</th>
-                        <th align="left">Type</th>
-                        <th align="left">Status</th>
-                        <th align="left">Start</th>
-                        <th align="left">Recruiter</th>
-                        <th align="left">Owner</th>
-                        <th align="left">Created</th>
-                        <th align="left">Modified</th>
+                        <th align="left"><?php echo _('Title'); ?></th>
+                        <th align="left"><?php echo _('Company'); ?></th>
+                        <th align="left"><?php echo _('Type'); ?></th>
+                        <th align="left"><?php echo _('Status'); ?></th>
+                        <th align="left"><?php echo _('Start'); ?></th>
+                        <th align="left"><?php echo _('Recruiter'); ?></th>
+                        <th align="left"><?php echo _('Owner'); ?></th>
+                        <th align="left"><?php echo _('Created'); ?></th>
+                        <th align="left"><?php echo _('Modified'); ?></th>
 
                     </tr>
 
@@ -62,17 +62,17 @@
             <!-- /JO -->
 
             <!-- Candidates -->
-            <p class="note">Candidates Results</p>
+            <p class="note"><?php echo _('Candidates Results'); ?></p>
             <?php if (!empty($this->candidatesRS)): ?>
                 <table class="sortable" width="100%">
                     <tr>
-                        <th align="left" nowrap="nowrap">First Name</th>
-                        <th align="left" nowrap="nowrap">Last Name</th>
-                        <th align="left" width="160">Home</th>
-                        <th align="left" width="160">Cell</th>
-                        <th align="left" width="65">Owner</th>
-                        <th align="left" width="60">Created</th>
-                        <th align="left" width="60">Modified</th>
+                        <th align="left" nowrap="nowrap"><?php echo _('First Name'); ?></th>
+                        <th align="left" nowrap="nowrap"><?php echo _('Last Name'); ?></th>
+                        <th align="left" width="160"><?php echo _('Home'); ?></th>
+                        <th align="left" width="160"><?php echo _('Cell'); ?></th>
+                        <th align="left" width="65"><?php echo _('Owner'); ?></th>
+                        <th align="left" width="60"><?php echo _('Created'); ?></th>
+                        <th align="left" width="60"><?php echo _('Modified'); ?></th>
                     </tr>
 
                     <?php foreach ($this->candidatesRS as $rowNumber => $candidatesData): ?>
@@ -96,22 +96,22 @@
                     <?php endforeach; ?>
                 </table>
             <?php else: ?>
-                <p>No matching entries found.</p>
+                <p><?php echo _('No matching entries found.'); ?></p>
             <?php endif; ?>
             <br />
             <!-- /Candidates -->
 
             <!-- Companies -->
-            <p class="note">Companies Results</p>
+            <p class="note"><?php echo _('Companies Results'); ?></p>
             <?php if (!empty($this->companiesRS)): ?>
                 <table class="sortable" width="100%">
                     <thead>
                         <tr>
-                            <th align="left">Name</th>
-                            <th align="left" width="160" nowrap="nowrap">Primary Phone</th>
-                            <th align="left" width="65">Owner</th>
-                            <th align="left" width="60">Created</th>
-                            <th align="left" width="60">Modified</th>
+                            <th align="left"><?php echo _('Name'); ?></th>
+                            <th align="left" width="160" nowrap="nowrap"><?php echo _('Primary Phone'); ?></th>
+                            <th align="left" width="65"><?php echo _('Owner'); ?></th>
+                            <th align="left" width="60"><?php echo _('Created'); ?></th>
+                            <th align="left" width="60"><?php echo _('Modified'); ?></th>
                         </tr>
                     </thead>
 
@@ -130,25 +130,25 @@
                     <?php endforeach; ?>
                 </table>
             <?php else: ?>
-                <p>No matching entries found.</p>
+                <p><?php echo _('No matching entries found.'); ?></p>
             <?php endif; ?>
             <br />
             <!-- /Companies -->
 
             <!-- Contacts -->
-            <p class="note">Contacts Results</p>
+            <p class="note"><?php echo _('Contacts Results'); ?></p>
             <?php if (!empty($this->contactsRS)): ?>
                 <table class="sortable" width="100%">
                     <tr>
-                        <th align="left" nowrap="nowrap">First Name</th>
-                        <th align="left" nowrap="nowrap">Last Name</th>
-                        <th align="left">Title</th>
-                        <th align="left">Company</th>
-                        <th align="left">Work</th>
-                        <th align="left">Cell</th>
-                        <th align="left">Owner</th>
-                        <th align="left">Created</th>
-                        <th align="left">Modified</th>
+                        <th align="left" nowrap="nowrap"><?php echo _('First Name'); ?></th>
+                        <th align="left" nowrap="nowrap"><?php echo _('Last Name'); ?></th>
+                        <th align="left"><?php echo _('Title'); ?></th>
+                        <th align="left"><?php echo _('Company'); ?></th>
+                        <th align="left"><?php echo _('Work'); ?></th>
+                        <th align="left"><?php echo _('Cell'); ?></th>
+                        <th align="left"><?php echo _('Owner'); ?></th>
+                        <th align="left"><?php echo _('Created'); ?></th>
+                        <th align="left"><?php echo _('Modified'); ?></th>
 
                     </tr>
 
@@ -179,7 +179,7 @@
                     <?php endforeach; ?>
                 </table>
             <?php else: ?>
-                <p>No matching entries found.</p>
+                <p><?php echo _('No matching entries found.'); ?></p>
             <?php endif; ?>
             <!-- /Contacts -->
         </div>

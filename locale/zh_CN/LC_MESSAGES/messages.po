@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenCATS\n"
-"POT-Creation-Date: 2017-06-20 20:43+0800\n"
-"PO-Revision-Date: 2017-06-20 20:43+0800\n"
+"POT-Creation-Date: 2017-06-21 09:47+0800\n"
+"PO-Revision-Date: 2017-06-21 09:48+0800\n"
 "Last-Translator: lidouf <lidouf@gmail.com>\n"
 "Language-Team: lidouf@gmail.com\n"
 "Language: zh_CN\n"
@@ -70,6 +70,7 @@ msgstr "添加候选人"
 
 #: modules/candidates/Add.tpl:72 modules/companies/Show.tpl:300
 #: modules/contacts/Add.tpl:28 modules/contacts/Edit.tpl:30
+#: modules/home/SearchEverything.tpl:69 modules/home/SearchEverything.tpl:143
 msgid "First Name"
 msgstr "姓名"
 
@@ -79,6 +80,7 @@ msgstr "中名"
 
 #: modules/candidates/Add.tpl:151 modules/companies/Show.tpl:301
 #: modules/contacts/Add.tpl:37 modules/contacts/Edit.tpl:39
+#: modules/home/SearchEverything.tpl:70 modules/home/SearchEverything.tpl:144
 msgid "Last Name"
 msgstr "姓氏首字母"
 
@@ -178,7 +180,7 @@ msgid "Disability Status"
 msgstr "身体状况"
 
 #: modules/candidates/Add.tpl:389 modules/companies/Add.tpl:144
-#: modules/companies/Edit.tpl:187
+#: modules/companies/Edit.tpl:187 modules/contacts/Add.tpl:209
 msgid "Other"
 msgstr "其它"
 
@@ -231,7 +233,8 @@ msgstr "返回搜索"
 msgid "Back to Candidates"
 msgstr "返回候选人列表"
 
-#: modules/candidates/Candidates.tpl:22 modules/joborders/JobOrders.tpl:19
+#: modules/candidates/Candidates.tpl:22 modules/home/SearchEverything.tpl:71
+#: modules/joborders/JobOrders.tpl:19
 msgid "Home"
 msgstr "首页"
 
@@ -288,6 +291,7 @@ msgstr ""
 
 #: modules/candidates/Show.tpl:47 modules/companies/Show.tpl:28
 #: modules/contacts/Show.tpl:29 modules/home/Home.tpl:34
+#: modules/home/SearchEverything.tpl:110
 msgid "Name"
 msgstr "名称"
 
@@ -305,7 +309,9 @@ msgstr "提交次数"
 
 #: modules/candidates/Show.tpl:186 modules/companies/Show.tpl:107
 #: modules/companies/Show.tpl:306 modules/contacts/Show.tpl:138
-#: modules/contacts/Show.tpl:230
+#: modules/contacts/Show.tpl:230 modules/home/SearchEverything.tpl:30
+#: modules/home/SearchEverything.tpl:74 modules/home/SearchEverything.tpl:113
+#: modules/home/SearchEverything.tpl:150
 msgid "Created"
 msgstr "创建"
 
@@ -313,6 +319,8 @@ msgstr "创建"
 #: modules/companies/Edit.tpl:206 modules/companies/Show.tpl:112
 #: modules/companies/Show.tpl:307 modules/contacts/Edit.tpl:247
 #: modules/contacts/Show.tpl:143 modules/contacts/Show.tpl:237
+#: modules/home/SearchEverything.tpl:29 modules/home/SearchEverything.tpl:73
+#: modules/home/SearchEverything.tpl:112 modules/home/SearchEverything.tpl:149
 #: modules/joborders/Add.tpl:207
 msgid "Owner"
 msgstr "职位提供者"
@@ -410,12 +418,14 @@ msgstr "匹配度"
 #: modules/candidates/Show.tpl:447 modules/companies/Show.tpl:302
 #: modules/contacts/Add.tpl:63 modules/contacts/Edit.tpl:66
 #: modules/contacts/Show.tpl:60 modules/contacts/Show.tpl:227
+#: modules/home/SearchEverything.tpl:23 modules/home/SearchEverything.tpl:145
 #: modules/joborders/Add.tpl:35
 msgid "Title"
 msgstr "名称"
 
 #: modules/candidates/Show.tpl:448 modules/contacts/Add.tpl:46
 #: modules/contacts/Show.tpl:46 modules/home/Home.tpl:35
+#: modules/home/SearchEverything.tpl:24 modules/home/SearchEverything.tpl:146
 #: modules/joborders/Add.tpl:51
 msgid "Company"
 msgstr "公司"
@@ -429,6 +439,7 @@ msgid "Entered By"
 msgstr "录入人"
 
 #: modules/candidates/Show.tpl:452 modules/contacts/Show.tpl:229
+#: modules/home/SearchEverything.tpl:26
 msgid "Status"
 msgstr "状态"
 
@@ -480,7 +491,8 @@ msgid "Date"
 msgstr "日期"
 
 #: modules/candidates/Show.tpl:546 modules/contacts/Show.tpl:228
-#: modules/contacts/Show.tpl:267 modules/joborders/Add.tpl:122
+#: modules/contacts/Show.tpl:267 modules/home/SearchEverything.tpl:25
+#: modules/joborders/Add.tpl:122
 msgid "Type"
 msgstr "类型"
 
@@ -545,7 +557,7 @@ msgid "Cut and paste freeform address here."
 msgstr "粘贴任意格式地址到这里面。"
 
 #: modules/companies/Add.tpl:46 modules/companies/Edit.tpl:114
-#: modules/companies/Show.tpl:38
+#: modules/companies/Show.tpl:38 modules/home/SearchEverything.tpl:111
 msgid "Primary Phone"
 msgstr "主要电话"
 
@@ -746,11 +758,13 @@ msgstr "不再关联到该公司"
 msgid "Reports To"
 msgstr "报告给"
 
-#: modules/contacts/Show.tpl:231
+#: modules/contacts/Show.tpl:231 modules/home/SearchEverything.tpl:31
+#: modules/home/SearchEverything.tpl:75 modules/home/SearchEverything.tpl:114
+#: modules/home/SearchEverything.tpl:151
 msgid "Modified"
 msgstr "修改"
 
-#: modules/contacts/Show.tpl:232
+#: modules/contacts/Show.tpl:232 modules/home/SearchEverything.tpl:27
 msgid "Start"
 msgstr "开始日期"
 
@@ -767,7 +781,7 @@ msgid "P"
 msgstr "管线"
 
 #: modules/contacts/Show.tpl:236 modules/home/Home.tpl:36
-#: modules/joborders/Add.tpl:181
+#: modules/home/SearchEverything.tpl:28 modules/joborders/Add.tpl:181
 msgid "Recruiter"
 msgstr "招聘人"
 
@@ -790,6 +804,39 @@ msgstr "重要候选人"
 #: modules/home/Home.tpl:74
 msgid "Submitted, Interviewing, Offered in Active Job Orders"
 msgstr "职位中的提交录用，面试和已发出OFFER的候选人"
+
+#: modules/home/SearchEverything.tpl:13
+msgid "Quick Search"
+msgstr "快速搜索"
+
+#: modules/home/SearchEverything.tpl:19
+msgid "Job Orders Results"
+msgstr "职位搜索结果"
+
+#: modules/home/SearchEverything.tpl:65
+msgid "Candidates Results"
+msgstr "候选人搜索结果"
+
+#: modules/home/SearchEverything.tpl:72 modules/home/SearchEverything.tpl:148
+msgid "Cell"
+msgstr "移动"
+
+#: modules/home/SearchEverything.tpl:99 modules/home/SearchEverything.tpl:133
+#: modules/home/SearchEverything.tpl:182
+msgid "No matching entries found."
+msgstr "没有找到匹配的数据。"
+
+#: modules/home/SearchEverything.tpl:105
+msgid "Companies Results"
+msgstr "公司搜索结果"
+
+#: modules/home/SearchEverything.tpl:139
+msgid "Contacts Results"
+msgstr "联系人搜索结果"
+
+#: modules/home/SearchEverything.tpl:147
+msgid "Work"
+msgstr "工作"
 
 #: modules/joborders/Add.tpl:18
 msgid "Add a new job order to the system."

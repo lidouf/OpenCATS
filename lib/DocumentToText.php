@@ -163,7 +163,7 @@ class DocumentToText
                 break;
 
             case DOCUMENT_TYPE_ODT:
-                $this->_rawOutput = $this->odt2text($filename);
+                $this->_rawOutput = $this->odt2text($fileName);
                 if ( $this->_rawOutput == null )
                 {
                     return false;
